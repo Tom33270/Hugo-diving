@@ -11,6 +11,7 @@ function Home() {
   const position = <FontAwesomeIcon icon={faLocationDot} />
   const panier = <FontAwesomeIcon icon={faPhotoFilm} />
   return (
+    
     <div>
       <header className= {styles.header}>
         <div className= {styles.tete}>
