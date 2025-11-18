@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBars, faUser,faLocationDot, faBagShopping, faPhotoFilm } from '@fortawesome/free-solid-svg-icons'
-
+import { Popover, Button } from 'antd';
 
 
 function Home() {
@@ -10,6 +10,19 @@ function Home() {
   const loggin = <FontAwesomeIcon icon={faUser} />;
   const position = <FontAwesomeIcon icon={faLocationDot} />
   const panier = <FontAwesomeIcon icon={faPhotoFilm} />
+ const popoverContent = (
+    <div className={styles.popoverContent}>
+      <span>La Plongée</span><br>
+      </br>
+      <span>______________</span><br></br>
+      <span>Le Snorkling</span><br>
+      </br>
+      <span>______________</span><br></br>
+      <span>Les Sorties Cétacés </span>
+      
+    
+    </div>
+);
   return (
     
     <div>
@@ -18,7 +31,9 @@ function Home() {
           <p className ={styles.menu}></p>
         <h1 className={styles.title}>HUGO DIVING</h1>
         <div className ={styles.btntete}>
-          <p className ={styles.menu}>{menu} menu</p>
+          <Popover title="MENU" content={popoverContent} className={styles.menu} trigger="click" >
+          <Button style={{cursor: 'pointer'}}>{menu}Menu</Button>
+          </Popover>
           <p className={styles.btnPosition}>{position} maps</p>
           <p className={styles.btnPanier}>{panier} photos</p>
         </div>
@@ -34,15 +49,6 @@ function Home() {
             </div>
         </div>
       </header>
-      {/* <body className={styles.product}>
-        <div className={styles.soundbar}>
-        <span className={styles.banner1}>LASTEST LAUNCH</span>
-        <span className={styles.banner2}>DIONE SOUNDBAR</span>
-        <img className= {styles.imgbar} src='../soundbar.png'/>
-         <button className={styles.discovbar}>DISCOVER</button>
-        </div>
-
-      </body> */}
     </div>
   );
 }
