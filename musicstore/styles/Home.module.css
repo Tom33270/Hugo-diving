@@ -1,0 +1,200 @@
+.header{
+  grid-template-rows: repeat(1, 12fr);
+  grid-template-columns: repeat(1, 12fr);
+  display: grid;
+  flex-direction: column;
+  background-image: url('../public/image/snorkeling.jpg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+}
+
+.tete{
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+.btntete{
+  
+background-color: transparent;
+  color: white;
+  margin-top: 5px;
+  font-size: 20px;
+  margin-right: 70px;
+ 
+  display: flex;
+  gap : 40px;
+
+
+}
+
+.title{
+  justify-content: center;
+  align-items: center;
+  font-family: avenir;
+  font-weight:400;
+  letter-spacing: 15px;
+    font-size: 24px;
+  color:white;  
+  padding-left: 100px;
+
+}
+
+.menu{
+  background-color: transparent;
+  color: white;
+  margin-top: 20px;
+  margin-left: 70px;
+  font-size: 18px;
+}
+.bas{
+ 
+  display: flex;
+
+}
+.titles{
+  padding-top: 20px;
+  padding-left: 60px;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+.title4{
+font-family: avenir;
+  color: white;
+}
+.titlebtm {
+
+  font-family: avenir;
+  font-weight: bold;
+  font-size: 35px;
+  color: white;
+}
+.bas{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btn_bas{
+  margin-bottom: 40px;
+  margin-right: 90px;
+  gap:20px;
+  display: flex;
+  flex-direction: row;
+
+ 
+}
+.discover {
+
+     width: 150px;
+    height: 45px;
+    margin: 20px;
+    border-radius: 6px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #fff;
+    cursor: pointer;
+    transition-duration: 1s;
+
+}
+
+.discover:hover{
+  color:white;
+  border: 1px solid white;
+  background-color:rgb(22, 21, 21);
+}
+.buy{
+     width: 150px;
+    height: 45px;
+    margin: 20px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition-duration: 1s;
+  
+}
+
+.buy:hover{
+  opacity: 40%;
+  color:black;
+  border: grey;
+  background-color:grey;
+}
+
+.btnPanier:hover{
+  color: grey;
+}
+
+.btnPosition:hover{
+  color: grey;
+}
+.btnLoggin:hover{
+  color: grey;
+}
+
+.menu:hover{
+  color: grey;
+}
+
+
+
+.product{
+  display: flex;
+  justify-content: center;
+
+}
+
+.soundbar{
+  display:flex;
+  align-items: center;  
+  flex-direction: column;
+  margin-top:40px;
+}
+
+.banner1{
+  font-family: avenir;
+font-size: 12px;
+
+}
+.banner2{ 
+  font-family: avenir;
+  font-size: 25px;
+font-weight: bolder;
+}
+
+.imgbar{
+  margin-top:40px;
+  width: 1000px;
+}
+
+.discovbar{
+    
+    letter-spacing: 1px;
+   width: 150px;
+    height: 45px;
+    margin: 20px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    background-color: black;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition-duration: 1s;
+
+}
+
+.discovbar:hover{
+color:rgb(179, 177, 177);
+  border: 1px solid rgb(0, 0, 0);
+  background-color:rgb(255, 255, 255);
+}
