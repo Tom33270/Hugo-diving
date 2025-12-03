@@ -1,30 +1,33 @@
-.header{
-  grid-template-rows: repeat(1, 12fr);
-  grid-template-columns: repeat(1, 12fr);
+.header {
   display: grid;
   flex-direction: column;
-  background-image: url('../public/image/snorkeling.jpg');
+  background-image: url('/image/snorkeling.jpg');
   height: 100vh;
   width: 100vw;
   background-size: cover;
+  background-position: center;
 }
 
-.tete{
-  
+.buttonsRight{
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+
+  width: 200px;
+  
 }
 
 .btntete{
-  
-background-color: transparent;
-  color: white;
-  margin-top: 5px;
-  font-size: 20px;
-  margin-right: 70px;
- 
   display: flex;
-  gap : 40px;
+background-color:transparent;
+
+  color: white;
+  font-size: 20px;
+  flex-direction: row;
+ align-items:center;
+ width: 100%;
+justify-content: space-between;
 
 
 }
@@ -37,15 +40,18 @@ background-color: transparent;
   letter-spacing: 15px;
     font-size: 24px;
   color:white;  
-  padding-left: 100px;
+  
+
+
+}
+
+.customModal{
 
 }
 
 .menu{
   background-color: transparent;
   color: white;
-  margin-top: 20px;
-  margin-left: 70px;
   font-size: 18px;
 }
 .bas{
@@ -54,26 +60,28 @@ background-color: transparent;
 
 }
 .titles{
-  padding-top: 20px;
-  padding-left: 60px;
+  
+ 
   display: flex;
   flex-direction: column;
+  margin-left: 100px;
   
   
 }
 .title4{
 font-family: avenir;
   color: white;
+  font-size: 50px;
 }
 .titlebtm {
 
   font-family: avenir;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 30px;
   color: white;
 }
 .bas{
-
+  margin-top: 380px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -88,6 +96,8 @@ font-family: avenir;
 
  
 }
+
+
 .discover {
 
      width: 150px;
@@ -122,9 +132,128 @@ font-family: avenir;
     transition-duration: 1s;
   
 }
+.snorkeling {
+  width: 400px;
+  height: 200px;
+  background-image: url('/image/snorkeling.jpg');
+  background-size: cover;
+   text-align: center;
+  align-content: center;
+  border-radius:  40px;
+  color:white;
+  font-size: 30px;
+ 
+}
+
+
+.plongee {
+  width: 400px;
+  height: 200px;
+  background-image: url('/image/diving.jpg');
+  background-size: cover;
+  border-radius:  40px;
+   text-align: center;
+  align-content: center;
+  color:white;
+  font-size: 30px;
+  
+}
+
+.cetaces {
+  width: 400px;
+  height: 200px;
+  background-image: url('/image/cetaces.jpg');
+  background-size: cover;
+  border-radius:  40px;
+  text-align: center;
+  align-content: center;
+  color:white;
+  font-size: 30px;
+ 
+  
+}
+
+
+.snorkeling,
+.plongee,
+.cetaces {
+  position: relative; 
+  overflow: hidden;  
+}
+
+.snorkeling::after,
+.plongee::after,
+.cetaces::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.3s ease;
+
+}
+
+.snorkeling:hover::after,
+.plongee:hover::after,
+.cetaces:hover::after {
+  background-color: rgba(255, 255, 255, 0.4);
+  
+  
+}
+
+.closingButton{
+  width:100px;
+  height: 50px;
+  background-color: transparent;
+  border: transparent;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.closingButton:hover{
+  color:white;
+  opacity: 0.7;
+}
+
+
+.customModal{
+  background-color:transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.customOverlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  inset: 0; 
+  display: flex;
+  justify-content: center;
+  
+}
+
+.activites{
+  color:white;
+  font-size: 60px;
+}
+
+.modalContent {
+  margin-bottom: 150px;
+  background-color:transparent;
+  width:100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  gap:40px;
+  align-items: center;
+}
+
 
 .buy:hover{
-  opacity: 40%;
+  opacity: 90%;
   color:black;
   border: grey;
   background-color:grey;
