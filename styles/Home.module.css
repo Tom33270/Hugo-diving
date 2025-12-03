@@ -1,3 +1,4 @@
+/* ----- Base header & layout ----- */
 .header {
   display: grid;
   flex-direction: column;
@@ -8,322 +9,352 @@
   background-position: center;
 }
 
-.buttonsRight{
+.buttonsRight {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
   width: 200px;
-  
 }
 
-.btntete{
+.btntete {
   display: flex;
-background-color:transparent;
-
+  background-color: transparent;
   color: white;
   font-size: 20px;
   flex-direction: row;
- align-items:center;
- width: 100%;
-justify-content: space-between;
-
-
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
 
-.title{
+.title {
   justify-content: center;
   align-items: center;
   font-family: avenir;
-  font-weight:400;
+  font-weight: 400;
   letter-spacing: 15px;
-    font-size: 24px;
-  color:white;  
-  
-
-
+  font-size: 24px;
+  color: white;
 }
 
-.customModal{
-
-}
-
-.menu{
+.menu {
   background-color: transparent;
   color: white;
   font-size: 18px;
 }
-.bas{
- 
-  display: flex;
+.menu:hover { color: grey; }
 
-}
-.titles{
-  
- 
-  display: flex;
-  flex-direction: column;
-  margin-left: 100px;
-  
-  
-}
-.title4{
-font-family: avenir;
-  color: white;
-  font-size: 50px;
-}
-.titlebtm {
-
-  font-family: avenir;
-  font-weight: bold;
-  font-size: 30px;
-  color: white;
-}
-.bas{
+.bas {
   margin-top: 380px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.btn_bas{
+.titles {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
+
+.title4 {
+  font-family: avenir;
+  color: white;
+  font-size: 50px;
+}
+
+.titlebtm {
+  font-family: avenir;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+
+.btn_bas {
   margin-bottom: 40px;
   margin-right: 90px;
-  gap:20px;
+  gap: 20px;
   display: flex;
   flex-direction: row;
-
- 
 }
 
-
+/* ----- Buttons ----- */
 .discover {
-
-     width: 150px;
-    height: 45px;
-    margin: 20px;
-    border-radius: 6px;
-    border: none;
-    font-size: 12px;
-    font-weight: 600;
-    background-color: #fff;
-    cursor: pointer;
-    transition-duration: 1s;
-
+  width: 150px;
+  height: 45px;
+  margin: 20px;
+  border-radius: 6px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #fff;
+  cursor: pointer;
+  transition-duration: 1s;
 }
-
-.discover:hover{
-  color:white;
+.discover:hover {
+  color: white;
   border: 1px solid white;
-  background-color:rgb(22, 21, 21);
-}
-.buy{
-     width: 150px;
-    height: 45px;
-    margin: 20px;
-    border-radius: 6px;
-    border: 1px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition-duration: 1s;
-  
-}
-.snorkeling {
-  width: 400px;
-  height: 200px;
-  background-image: url('/image/snorkeling.jpg');
-  background-size: cover;
-   text-align: center;
-  align-content: center;
-  border-radius:  40px;
-  color:white;
-  font-size: 30px;
- 
+  background-color: rgb(22, 21, 21);
 }
 
-
-.plongee {
-  width: 400px;
-  height: 200px;
-  background-image: url('/image/diving.jpg');
-  background-size: cover;
-  border-radius:  40px;
-   text-align: center;
-  align-content: center;
-  color:white;
-  font-size: 30px;
-  
+.buy {
+  width: 150px;
+  height: 45px;
+  margin: 20px;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+.buy:hover {
+  opacity: 90%;
+  color: black;
+  border: grey;
+  background-color: grey;
 }
 
-.cetaces {
-  width: 400px;
-  height: 200px;
-  background-image: url('/image/cetaces.jpg');
-  background-size: cover;
-  border-radius:  40px;
-  text-align: center;
-  align-content: center;
-  color:white;
-  font-size: 30px;
- 
-  
-}
+/* Hover states for header buttons */
+.btnPanier:hover,
+.btnPosition:hover,
+.btnLoggin:hover { color: grey; }
 
-
+/* ----- Activity cards ----- */
 .snorkeling,
 .plongee,
 .cetaces {
-  position: relative; 
-  overflow: hidden;  
+  width: 400px;
+  height: 200px;
+  background-size: cover;
+  text-align: center;
+  align-content: center; /* center for grid-like layout, ok if display:grid later */
+  border-radius: 40px;
+  color: white;
+  font-size: 30px;
+  position: relative;
+  overflow: hidden;
 }
+.snorkeling { background-image: url('/image/snorkeling.jpg'); }
+.plongee   { background-image: url('/image/diving.jpg'); }
+.cetaces   { background-image: url('/image/cetaces.jpg'); }
 
 .snorkeling::after,
 .plongee::after,
 .cetaces::after {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  inset: 0;
   background-color: rgba(255, 255, 255, 0);
   transition: background-color 0.3s ease;
-
 }
-
 .snorkeling:hover::after,
 .plongee:hover::after,
 .cetaces:hover::after {
   background-color: rgba(255, 255, 255, 0.4);
-  
-  
 }
 
-.closingButton{
-  width:100px;
+/* ----- Modal (react-modal) ----- */
+.customOverlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customModal {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.activites {
+  color: white;
+  font-size: 60px;
+}
+
+.modalContent {
+  margin-bottom: 150px;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.closingButton {
+  width: 100px;
   height: 50px;
   background-color: transparent;
   border: transparent;
   color: white;
   font-size: 20px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
+.closingButton:hover { color: white; opacity: 0.7; }
 
-.closingButton:hover{
-  color:white;
-  opacity: 0.7;
-}
-
-
-.customModal{
-  background-color:transparent;
+/* ----- Product & banners ----- */
+.product {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+}
+
+.soundbar {
+  display: flex;
   align-items: center;
-}
-
-.customOverlay {
-  background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  inset: 0; 
-  display: flex;
-  justify-content: center;
-  
-}
-
-.activites{
-  color:white;
-  font-size: 60px;
-}
-
-.modalContent {
-  margin-bottom: 150px;
-  background-color:transparent;
-  width:100%;
-  height: 100%;
-
-  display: flex;
-  flex-direction: row;
-  gap:40px;
-  align-items: center;
-}
-
-
-.buy:hover{
-  opacity: 90%;
-  color:black;
-  border: grey;
-  background-color:grey;
-}
-
-.btnPanier:hover{
-  color: grey;
-}
-
-.btnPosition:hover{
-  color: grey;
-}
-.btnLoggin:hover{
-  color: grey;
-}
-
-.menu:hover{
-  color: grey;
-}
-
-
-
-.product{
-  display: flex;
-  justify-content: center;
-
-}
-
-.soundbar{
-  display:flex;
-  align-items: center;  
   flex-direction: column;
-  margin-top:40px;
+  margin-top: 40px;
 }
 
-.banner1{
+.banner1 {
   font-family: avenir;
-font-size: 12px;
-
+  font-size: 12px;
 }
-.banner2{ 
+.banner2 {
   font-family: avenir;
   font-size: 25px;
-font-weight: bolder;
+  font-weight: bolder;
 }
 
-.imgbar{
-  margin-top:40px;
+.imgbar {
+  margin-top: 40px;
   width: 1000px;
 }
 
-.discovbar{
-    
-    letter-spacing: 1px;
-   width: 150px;
-    height: 45px;
-    margin: 20px;
-    border-radius: 6px;
-    border: 1px solid #fff;
-    background-color: black;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition-duration: 1s;
-
+.discovbar {
+  letter-spacing: 1px;
+  width: 150px;
+  height: 45px;
+  margin: 20px;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  background-color: black;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+.discovbar:hover {
+  color: rgb(179, 177, 177);
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
 
-.discovbar:hover{
-color:rgb(179, 177, 177);
-  border: 1px solid rgb(0, 0, 0);
-  background-color:rgb(255, 255, 255);
+/* ----- Responsive (mobile first adjustments) ----- */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    height: auto; /* éviter 100vh qui peut buguer sur mobile */
+    background-position: top;
+    background-size: cover;
+  }
+
+  .btntete {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 18px;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+
+  .buttonsRight {
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .bas {
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .titles {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .title4 { font-size: 32px; text-align: center; }
+  .titlebtm { font-size: 20px; text-align: center; }
+
+  .btn_bas {
+    flex-direction: column;
+    margin: 20px 0;
+    gap: 15px;
+  }
+
+  .discover,
+  .buy {
+    width: 80%;
+    max-width: 250px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  /* Activity cards scale to full width */
+  .snorkeling,
+  .plongee,
+  .cetaces {
+    width: 90%;
+    height: 150px;
+    font-size: 20px;
+    border-radius: 20px;
+    align-content: center;
+  }
+
+  .activites {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .modalContent {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+    height: auto;
+  }
+
+  .closingButton {
+    width: 80%;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .imgbar {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ----- Large screens refinement ----- */
+@media (min-width: 1200px) {
+  .title { font-size: 28px; letter-spacing: 18px; }
+  .title4 { font-size: 60px; }
+  .titlebtm { font-size: 34px; }
+  .snorkeling,
+  .plongee,
+  .cetaces { width: 450px; height: 240px; }
+  .imgbar { width: 1200px; }
 }
