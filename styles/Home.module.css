@@ -1,14 +1,26 @@
 /* ----- Base header & layout ----- */
 .header {
   display: grid;
-  flex-direction: column;
-  background-image: url('/image/snorkeling.jpg');
+  background-image: url('/image/reunion_ciel.jpg');
   height: 100vh;
-  width: 100vw;
-  background-size: cover;
-  background-position: center;
+  width: 100% ;
+  background-size:cover;  
+  background-position:center  ;
 }
 
+.mainTitle h1,
+.mainTitle p {
+  margin: 0;
+  padding: 0;
+}
+.mainTitle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainTitle p {
+  font-size: 16px;
+}
 .buttonsRight {
   display: flex;
   flex-direction: row;
@@ -17,9 +29,23 @@
   width: 200px;
 }
 
+.mapContainer {
+  width: 90%;
+  height: 80%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
 .btntete {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 998; 
+  background: rgba(0, 0, 0, 0.3); 
+  padding: 10px 0;
   display: flex;
-  background-color: transparent;
   color: white;
   font-size: 20px;
   flex-direction: row;
@@ -34,7 +60,7 @@
   font-family: avenir;
   font-weight: 400;
   letter-spacing: 15px;
-  font-size: 24px;
+  font-size: 50px;
   color: white;
 }
 
@@ -126,12 +152,15 @@
 /* ----- Activity cards ----- */
 .snorkeling,
 .plongee,
-.cetaces {
-  width: 400px;
-  height: 200px;
+.cetaces,
+.apnee {
+  width: 450px;
+  height: 250px;
   background-size: cover;
+  background-position: center;
+  justify-content: center;
   text-align: center;
-  align-content: center; /* center for grid-like layout, ok if display:grid later */
+  align-content: center; 
   border-radius: 40px;
   color: white;
   font-size: 30px;
@@ -139,12 +168,14 @@
   overflow: hidden;
 }
 .snorkeling { background-image: url('/image/snorkeling.jpg'); }
-.plongee   { background-image: url('/image/diving.jpg'); }
-.cetaces   { background-image: url('/image/cetaces.jpg'); }
+.plongee   { background-image: url('/image/diving.jpeg'); }
+.cetaces   { background-image: url('/image/cetaces.jpeg'); }
+.apnee      {background-image: url('/image/apnee.jpeg');}
 
 .snorkeling::after,
 .plongee::after,
-.cetaces::after {
+.cetaces::after ,
+.apnee::after{
   content: "";
   position: absolute;
   inset: 0;
@@ -153,12 +184,14 @@
 }
 .snorkeling:hover::after,
 .plongee:hover::after,
-.cetaces:hover::after {
+.cetaces:hover::after,
+.apnee:hover::after {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
 /* ----- Modal (react-modal) ----- */
 .customOverlay {
+  z-index: 999; 
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   inset: 0;
@@ -168,6 +201,7 @@
 }
 
 .customModal {
+  z-index: 999; 
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -206,155 +240,229 @@
 }
 .closingButton:hover { color: white; opacity: 0.7; }
 
-/* ----- Product & banners ----- */
-.product {
+.main {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    rgb(238, 237, 237) 0%,
+    rgb(80, 111, 129) 100%
+  );
 }
 
-.soundbar {
+.about {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  margin-top: 40px;
+  justify-content:flex-end;
+  width: 80%;
+  gap: 40px;
+  padding: 80px 0;
+  color: rgb(17, 17, 17);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+  background-image: url('/image/blackandwhite.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
-.banner1 {
-  font-family: avenir;
-  font-size: 12px;
+/* .portrait {
+  background-image: url('/image/portrait.jpeg');
+  background-position: center;
+  background-size: cover;
+  
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgb(189, 186, 186);
+} */
+.presentation{
+  margin-right: 40px;
+  
+
 }
-.banner2 {
-  font-family: avenir;
-  font-size: 25px;
-  font-weight: bolder;
+.about h2 {
+  color:rgb(240, 223, 205);
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 
-.imgbar {
-  margin-top: 40px;
-  width: 1000px;
+.about p {
+  color:rgb(240, 224, 205);
+  max-width: 500px;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
-.discovbar {
-  letter-spacing: 1px;
-  width: 150px;
-  height: 45px;
-  margin: 20px;
-  border-radius: 6px;
-  border: 1px solid #fff;
-  background-color: black;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
+.moreBtn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: 1px solid rgb(240, 224, 205);
+  background: transparent;
+  color:  rgb(240, 224, 205);
   cursor: pointer;
-  transition-duration: 1s;
+  transition: 0.3s ease;
 }
-.discovbar:hover {
-  color: rgb(179, 177, 177);
-  border: 1px solid rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
+.otherBtn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: 1px solid rgb(255, 255, 255);
+  background: transparent;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: 0.3s ease;
 }
-
-/* ----- Responsive (mobile first adjustments) ----- */
-@media (max-width: 768px) {
-  .header {
-    display: flex;
-    flex-direction: column;
-    height: auto; /* éviter 100vh qui peut buguer sur mobile */
-    background-position: top;
-    background-size: cover;
-  }
-
-  .btntete {
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    font-size: 16px;
-  }
-
-  .title {
-    font-size: 18px;
-    letter-spacing: 5px;
-    text-align: center;
-  }
-
-  .buttonsRight {
-    width: 100%;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .bas {
-    margin-top: 40px;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .titles {
-    margin-left: 0;
-    align-items: center;
-  }
-
-  .title4 { font-size: 32px; text-align: center; }
-  .titlebtm { font-size: 20px; text-align: center; }
-
-  .btn_bas {
-    flex-direction: column;
-    margin: 20px 0;
-    gap: 15px;
-  }
-
-  .discover,
-  .buy {
-    width: 80%;
-    max-width: 250px;
-    height: 40px;
-    font-size: 14px;
-  }
-
-  /* Activity cards scale to full width */
-  .snorkeling,
-  .plongee,
-  .cetaces {
-    width: 90%;
-    height: 150px;
-    font-size: 20px;
-    border-radius: 20px;
-    align-content: center;
-  }
-
-  .activites {
-    font-size: 32px;
-    text-align: center;
-  }
-
-  .modalContent {
-    flex-direction: column;
-    gap: 20px;
-    margin-bottom: 40px;
-    height: auto;
-  }
-
-  .closingButton {
-    width: 80%;
-    height: 40px;
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  .imgbar {
-    width: 100%;
-    max-width: 100%;
-  }
+.otherBtn:hover {
+  background: white;
+  color: black;
 }
 
-/* ----- Large screens refinement ----- */
-@media (min-width: 1200px) {
-  .title { font-size: 28px; letter-spacing: 18px; }
-  .title4 { font-size: 60px; }
-  .titlebtm { font-size: 34px; }
-  .snorkeling,
-  .plongee,
-  .cetaces { width: 450px; height: 240px; }
-  .imgbar { width: 1200px; }
+.moreBtn:hover {
+  background: rgb(88, 87, 87);
+  color: rgb(255, 255, 255);
+}
+.why {
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+}
+
+.why h2 {
+  color: rgb(36, 35, 35);
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 600px;
+  margin: auto;
+  font-size: 20px;
+  color: rgb(87, 85, 85);
+}
+
+.gallery {
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+}
+
+.gallery h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.galleryGrid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.galleryGrid img:hover {
+  transform: scale(1.05);
+}
+.prices {
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+}
+
+.prices h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.prices ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 30px auto;
+  font-size: 20px;
+  line-height: 2;
+}
+
+.species {
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+}
+
+.species h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.speciesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.speciesGrid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.speciesGrid p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.contact {
+  
+   background: linear-gradient(
+    to bottom,
+    rgb(255, 0, 0)0%
+    rgb(255, 0, 0) 100%
+  );
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  color: white;
+}
+
+.contact h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.socials {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.socials a {
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.socials a:hover {
+  opacity: 0.7;
 }
