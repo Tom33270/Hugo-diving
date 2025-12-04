@@ -433,15 +433,19 @@
 
 .contact {
   
-   background: linear-gradient(
-    to bottom,
-    rgb(255, 0, 0)0%
-    rgb(255, 0, 0) 100%
-  );
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 30px 0;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: white;
+}
+.contact h2,
+.contact p{
+  margin: 0;
+  padding: 0;
 }
 
 .contact h2 {
@@ -465,4 +469,13 @@
 
 .socials a:hover {
   opacity: 0.7;
+}
+
+.location{
+
+  width: 175px;
+}
+.location:hover{
+  cursor: pointer;  
+  border-bottom: 1px solid white;
 }

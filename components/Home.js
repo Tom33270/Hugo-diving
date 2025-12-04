@@ -4,6 +4,8 @@ import { faBars, faLocationDot, faPhotoFilm } from '@fortawesome/free-solid-svg-
 import { Button } from 'antd';
 import { useState, useEffect, useRef } from 'react';
 import Modal from 'react-modal';
+import { useRouter } from "next/router";
+
 
 import 'leaflet/dist/leaflet.css';
 import dynamic from 'next/dynamic';
@@ -11,6 +13,8 @@ import dynamic from 'next/dynamic';
 const Leaflet = dynamic(() => import('leaflet'), { ssr: false });
 
 function Home() {
+  const router = useRouter();
+
   const [open, setOpen] = useState(false);     
   const [openMap, setOpenMap] = useState(false); 
   const mapRef = useRef(null);
@@ -18,6 +22,19 @@ function Home() {
   const menu = <FontAwesomeIcon icon={faBars} />;
   const position = <FontAwesomeIcon icon={faLocationDot} />;
   const panier = <FontAwesomeIcon icon={faPhotoFilm} />;
+
+  const galleryImages = [
+  "/image/surface.jpeg",
+  "/image/bubbles.jpeg",
+  "/image/dauphin.jpeg",
+  "/image/baleine.jpg",
+  "/image/tortue.jpg",
+  "/image/raie.jpg",
+];
+
+const randomImages = [...galleryImages]
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 3);
 
 
 
@@ -71,10 +88,10 @@ useEffect(() => {
 
   const modalContent = (
     <div className={styles.modalContent}>
-      <div className={styles.plongee} cursor>Plongée</div>
-      <div className={styles.snorkeling}>Snorkeling</div>
-      <div className={styles.cetaces}>Sortie cétacés</div>
-      <div className={styles.apnee}>Apnée</div>
+      <div className={styles.plongee} onClick={() => router.push("/plongee")}>Plongée</div>
+      <div className={styles.snorkeling} onClick={() => router.push("/snorkeling")}>Snorkeling</div>
+      <div className={styles.cetaces } onClick={() => router.push("/cetaces")}>Sortie cétacés</div>
+      <div className={styles.apnee} onClick={() => router.push("/apnee")}>Apnée</div>
     </div>
   );
 
@@ -151,7 +168,7 @@ useEffect(() => {
       expériences uniques : plongée, apnée et rencontres avec les cétacés 
       dans les eaux de la Réunion.
     </p>
-    <button className={styles.moreBtn}>En savoir plus</button>
+    <button className={styles.moreBtn} onClick={() => router.push("/profile")}>En savoir plus</button>
   </div>
 </section>
 
@@ -167,12 +184,17 @@ useEffect(() => {
 
 <section className={styles.gallery}>
   <h2 className={styles.underWater}>Moments sous l'eau</h2>
-  <div className={styles.galleryGrid}>
-    <img src="/image/surface.jpeg" alt="" />
-    <img src="/image/bubbles.jpeg" alt="" />
-    <img src="/image/dauphin.jpeg" alt="" />
-  </div>
-  <button className={styles.otherBtn}>Voir la galerie</button>
+ <div className={styles.galleryGrid}>
+  {randomImages.map((src, index) => (
+    <img
+      key={index}
+      src={src}
+      onClick={() => router.push("/gallery")}
+    />
+  ))}
+</div>
+
+  <button className={styles.otherBtn} onClick={() => router.push("/gallery")}>Voir la galerie</button>
 </section>
 
 <section className={styles.prices}>
@@ -189,17 +211,17 @@ useEffect(() => {
 <section className={styles.species}>
   <h2>Rencontrez les espèces</h2>
   <div className={styles.speciesGrid}>
-    <div><img src="/image/dauphin.jpg" /><p>poisson 1</p></div>
-    <div><img src="/image/baleine.jpg" /><p>poisson 2</p></div>
-    <div><img src="/image/tortue.jpg" /><p>poisson 3</p></div>
-    <div><img src="/image/raie.jpg" /><p>poisson 4</p></div>
+    <div><img src="/image/dauphin.jpg" onClick={() => router.push("/wikipage")}/><p>poisson 1</p></div>
+    <div><img src="/image/baleine.jpg"onClick={() => router.push("/wikipage")} /><p>poisson 2</p></div>
+    <div><img src="/image/tortue.jpg" onClick={() => router.push("/wikipage")}/><p>poisson 3</p></div>
+    <div><img src="/image/raie.jpg" onClick={() => router.push("/wikipage")}/><p>poisson 4</p></div>
   </div>
 </section>
 
 <section className={styles.contact}>
   <h2>Contact</h2>
   <p>📞 ton 06 bébé</p>
-  <p>📍 Saint-Gilles-les-Bains</p>
+  <p >📍<span onClick={() => setOpenMap(true)} className={styles.location}>Saint-Gilles-les-Bains</span></p>
   <div className={styles.socials}>
     <a>Instagram ?</a>
     <a>Facebook ?</a>
