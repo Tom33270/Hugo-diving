@@ -479,3 +479,168 @@
   cursor: pointer;  
   border-bottom: 1px solid white;
 }
+
+/* ============================
+   📱 MOBILE VERSION (max 768px)
+   ============================ */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .header {
+    height: 70vh;
+    background-position: center;
+  }
+
+  .btntete {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+
+  .title {
+    font-size: 28px;
+    letter-spacing: 5px;
+  }
+
+  .buttonsRight {
+    width: auto;
+    gap: 10px;
+  }
+
+  /* TITRES DU HEADER */
+  .bas {
+    margin-top: 150px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .titles {
+    margin-left: 0;
+  }
+
+  .title4 {
+    font-size: 32px;
+  }
+
+  .titlebtm {
+    font-size: 22px;
+  }
+
+  .btn_bas {
+    margin-right: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .discover,
+  .buy {
+    width: 140px;
+    height: 40px;
+    margin: 10px 0;
+  }
+
+  /* ACTIVITÉS */
+  .modalContent {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  .snorkeling,
+  .plongee,
+  .cetaces,
+  .apnee {
+    width: 90%;
+    height: 180px;
+    font-size: 22px;
+  }
+
+  /* ABOUT */
+  .about {
+    flex-direction: column;
+    width: 90%;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .presentation {
+    margin-right: 0;
+  }
+
+  .about h2 {
+    font-size: 28px;
+  }
+
+  .about p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  /* WHY */
+  .why h2 {
+    font-size: 28px;
+  }
+
+  .whyGrid {
+    grid-template-columns: 1fr;
+    font-size: 18px;
+  }
+
+  /* GALLERY */
+  .gallery h2 {
+    font-size: 28px;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .galleryGrid img {
+    height: 150px;
+  }
+
+  /* PRICES */
+  .prices h2 {
+    font-size: 28px;
+  }
+
+  .prices ul {
+    font-size: 18px;
+  }
+
+  /* SPECIES */
+  .species h2 {
+    font-size: 28px;
+  }
+
+  .speciesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .speciesGrid img {
+    height: 120px;
+  }
+
+  .speciesGrid p {
+    font-size: 16px;
+  }
+
+  /* CONTACT */
+  .contact h2 {
+    font-size: 28px;
+  }
+
+  .socials {
+    gap: 15px;
+  }
+
+  .socials a {
+    font-size: 16px;
+  }
+
+  .location {
+    width: 140px;
+  }
+}
