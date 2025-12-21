@@ -15,9 +15,10 @@ const Leaflet = dynamic(() => import('leaflet'), { ssr: false });
 function Home() {
   const router = useRouter();
 
-  const [open, setOpen] = useState(false);     
-  const [openMap, setOpenMap] = useState(false); 
+  const [open, setOpen] = useState(false);
+  const [openMap, setOpenMap] = useState(false);
   const mapRef = useRef(null);
+  const tarifsRef = useRef(null);
 
   const menu = <FontAwesomeIcon icon={faBars} />;
   const position = <FontAwesomeIcon icon={faLocationDot} />;
@@ -107,6 +108,7 @@ useEffect(() => {
           
             <Modal
               isOpen={open}
+              bodyOpenClassName="no-scroll"
               onRequestClose={() => setOpen(false)}
               shouldCloseOnOverlayClick={true}
               className={styles.customModal}
@@ -120,8 +122,8 @@ useEffect(() => {
             </Modal>
 
             <div className={styles.mainTitle}>
-              <h1 className={styles.title}>HUGO DIVING</h1>
-              <p>Saint-Gilles-les-Bains, la Réunion</p>
+              <h1 className={styles.title}> DIVING</h1>
+              <p>Saint-Gilles-les-Bains</p>
             </div>
 
             <div className={styles.buttonsRight}>
@@ -139,7 +141,7 @@ useEffect(() => {
             <span className={styles.titlebtm}>OCEANS</span>
           </div>
           <div className={styles.btn_bas}>
-            <button className={styles.discover}>TARIFS</button>
+            <button className={styles.discover} onClick={() => tarifsRef.current?.scrollIntoView({ behavior: 'smooth' })}>TARIFS</button>
             <button className={styles.buy}>RESERVATIONS</button>
           </div>
         </div>
@@ -210,7 +212,7 @@ useEffect(() => {
   <button className={styles.otherBtn} onClick={() => router.push("/gallery")}>Voir la galerie</button>
 </section>
 
-<section className={styles.prices}>
+<section className={styles.prices} ref={tarifsRef}>
   <h2>Tarifs</h2>
   <ul>
     <li>Baptême de Plongée — 80€</li>
