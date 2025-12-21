@@ -1,0 +1,381 @@
+/* Global container */
+.global {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgb(238, 237, 237) 0%,
+    rgb(80, 111, 129) 100%
+  );
+}
+
+/* Header section */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/image/snorkeling.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+  color: white;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header .title {
+  position: relative;
+  z-index: 1;
+  font-family: avenir;
+  font-weight: 400;
+  letter-spacing: 10px;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.header button {
+  position: relative;
+  z-index: 1;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.header button:hover {
+  background: white;
+  color: black;
+}
+
+/* Main section */
+.main {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Common sections */
+.intro,
+.experience,
+.ideal {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.intro h2,
+.experience h2,
+.discover h2,
+.spots h2,
+.included h2,
+.ideal h2,
+.tips h2,
+.infos h2 {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.intro p,
+.experience p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: auto;
+  color: rgb(240, 240, 240);
+}
+
+/* Discover Grid */
+.discover {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.discoverGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+}
+
+.discoverGrid div {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.discoverGrid div:hover {
+  transform: translateY(-5px);
+}
+
+.discoverGrid h3 {
+  color: rgb(36, 35, 35);
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.discoverGrid p {
+  color: rgb(87, 85, 85);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Spots section */
+.spots {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.spotsContent {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.spotsContent p {
+  color: rgb(87, 85, 85);
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.spotsContent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.spotsContent ul li {
+  color: rgb(87, 85, 85);
+  font-size: 16px;
+  line-height: 2;
+  padding-left: 25px;
+  position: relative;
+}
+
+.spotsContent ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: rgb(80, 111, 129);
+  font-weight: bold;
+}
+
+/* Included section */
+.included {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.includedGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+}
+
+.includedGrid div {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.includedGrid h3 {
+  color: rgb(36, 35, 35);
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.includedGrid p {
+  color: rgb(87, 85, 85);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Ideal section */
+.ideal ul {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.ideal ul li {
+  color: white;
+  font-size: 18px;
+  line-height: 2;
+  padding-left: 25px;
+  position: relative;
+}
+
+.ideal ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  color: rgb(240, 240, 240);
+  font-weight: bold;
+}
+
+/* Tips section */
+.tips {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.tipsContent {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.tipsContent p {
+  color: rgb(36, 35, 35);
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.tipsContent p:first-child {
+  margin-top: 0;
+}
+
+.tipsContent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.tipsContent ul li {
+  color: rgb(87, 85, 85);
+  font-size: 16px;
+  line-height: 2;
+  padding-left: 25px;
+  position: relative;
+}
+
+.tipsContent ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: rgb(80, 111, 129);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Infos section */
+.infos {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.infosGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+}
+
+.infosGrid div {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.infosGrid h3 {
+  color: rgb(36, 35, 35);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.infosGrid p {
+  color: rgb(87, 85, 85);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* CTA section */
+.cta {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.cta h2 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.cta button {
+  padding: 15px 35px;
+  border-radius: 8px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.cta button:hover {
+  background: white;
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .discoverGrid,
+  .includedGrid,
+  .infosGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .header .title {
+    font-size: 35px;
+    letter-spacing: 5px;
+  }
+
+  .intro h2,
+  .discover h2,
+  .spots h2,
+  .included h2,
+  .ideal h2,
+  .tips h2,
+  .infos h2 {
+    font-size: 32px;
+  }
+}

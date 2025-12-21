@@ -52,7 +52,7 @@ useEffect(() => {
       mapRef.current = null;
     }
 
-    const saintGilles = [-21.063, 55.229];
+    const saintGilles = [-21.05574853081549, 55.22350096660605];
 
     const baleineIcon = L.icon({
       iconUrl: '/image/baleine.png',
@@ -74,7 +74,7 @@ useEffect(() => {
 
     const marker = L.marker(saintGilles, { icon: baleineIcon })
       .addTo(mapRef.current)
-      .bindPopup("Hugo Diving - Saint-Gilles-les-Bains 🐋");
+      .bindPopup("Hugo Diving - Local 3A, Avant Port, Port de Plaisance, 97434, La Réunion🐋");
 
 
     marker.on('click', () => {
@@ -164,21 +164,34 @@ useEffect(() => {
   <div className={styles.presentation}>
     <h2>Me, Myself and I</h2>
     <p>
-      Moniteur passionné depuis plus de 10 ans, je vous accompagne dans des 
-      expériences uniques : plongée, apnée et rencontres avec les cétacés 
-      dans les eaux de la Réunion.
+      Moniteur de plongée depuis 8 ans, j'ai travaillé en métropole à Banyuls-sur-Mer,
+      en Thaïlande et à La Réunion. Avec environ 4000 plongées entre 0 et 60 mètres,
+      je vous accompagne dans des expériences uniques sous-marines dans les eaux
+      exceptionnelles de La Réunion.
     </p>
     <button className={styles.moreBtn} onClick={() => router.push("/profile")}>En savoir plus</button>
   </div>
 </section>
 
 <section className={styles.why}>
-  <h2>Pourquoi moi?</h2>
+  <h2>Pourquoi choisir Hugo Diving?</h2>
   <div className={styles.whyGrid}>
-    <div> blabla certifs (jsuis bon au tennis aussi)</div>
-    <div> blabla matos utilisé</div>
-    <div> blabla connaissances</div>
-    <div> blabla blabla j'aime la nature tmtc</div>
+    <div>
+      <h3>Certifications multiples</h3>
+      <p>DEJEPS E4, PADI, SDI/TDI, FFESSM, ANMP, PFI Apnée</p>
+    </div>
+    <div>
+      <h3>Matériel Scubapro</h3>
+      <p>Équipement de qualité professionnelle, régulièrement entretenu</p>
+    </div>
+    <div>
+      <h3>Expérience internationale</h3>
+      <p>8 ans d'enseignement, 4000+ plongées dans le monde entier</p>
+    </div>
+    <div>
+      <h3>Approche personnalisée</h3>
+      <p>Petits groupes, encadrement adapté à votre niveau</p>
+    </div>
   </div>
 </section>
 
@@ -198,14 +211,15 @@ useEffect(() => {
 </section>
 
 <section className={styles.prices}>
-  <h2>Planning & Tarifs</h2>
+  <h2>Tarifs</h2>
   <ul>
-    <li>Sortie cétacés — 60€</li>
-    <li>Plongée bouteille — 55€</li>
-    <li>Snorkeling — 35€</li>
-    <li>Initiation apnée — 45€</li>
+    <li>Baptême de Plongée — 80€</li>
+    <li>Initiation — 110€</li>
+    <li>Plongée Exploration (0-20m) — 60€</li>
+    <li>Plongées Profondes (jusqu'à 60m) — 60€</li>
+    <li>Option Nitrox — +15€</li>
   </ul>
-  <button className={styles.otherBtn}>Réserver</button>
+  <button className={styles.otherBtn} onClick={() => router.push("/plongee")}>Voir toutes les formules</button>
 </section>
 
 <section className={styles.species}>
@@ -220,12 +234,11 @@ useEffect(() => {
 
 <section className={styles.contact}>
   <h2>Contact</h2>
-  <p>📞 ton 06 bébé</p>
-  <p >📍<span onClick={() => setOpenMap(true)} className={styles.location}>Saint-Gilles-les-Bains</span></p>
+  <p>📍 Club Escapade Plongée</p>
+  <p ><span onClick={() => setOpenMap(true)} className={styles.location}>Saint-Gilles-les-Bains, La Réunion</span></p>
   <div className={styles.socials}>
-    <a>Instagram ?</a>
-    <a>Facebook ?</a>
-    <a>WhatsApp ?</a>
+    <a>Réservations</a>
+    <a>Me contacter</a>
   </div>
 </section>
     </div>

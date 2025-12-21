@@ -1,0 +1,416 @@
+/* Global container */
+.global {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgb(238, 237, 237) 0%,
+    rgb(80, 111, 129) 100%
+  );
+}
+
+/* Header section */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/image/cetaces.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+  color: white;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header .title {
+  position: relative;
+  z-index: 1;
+  font-family: avenir;
+  font-weight: 400;
+  letter-spacing: 10px;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.header button {
+  position: relative;
+  z-index: 1;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.header button:hover {
+  background: white;
+  color: black;
+}
+
+/* Main section */
+.main {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Intro and conservation */
+.intro,
+.conservation {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.intro h2,
+.seasons h2,
+.species h2,
+.observation h2,
+.why h2,
+.tips h2,
+.conservation h2,
+.infos h2 {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.intro p,
+.conservation p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: auto;
+  color: rgb(240, 240, 240);
+}
+
+/* Seasons section */
+.seasons {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.seasonsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+}
+
+.seasonCard {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.seasonCard:hover {
+  transform: translateY(-5px);
+}
+
+.seasonCard h3 {
+  color: rgb(36, 35, 35);
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.period {
+  color: rgb(80, 111, 129);
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.seasonCard p {
+  color: rgb(87, 85, 85);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Species section */
+.species {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.speciesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+}
+
+.speciesGrid div {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.speciesGrid h3 {
+  color: rgb(36, 35, 35);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.speciesGrid p {
+  color: rgb(87, 85, 85);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Observation section */
+.observation {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.observationContent {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.observationContent h3 {
+  color: rgb(36, 35, 35);
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.observationContent ol {
+  padding-left: 25px;
+  margin: 0 0 30px 0;
+}
+
+.observationContent ol li {
+  color: rgb(87, 85, 85);
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 10px;
+}
+
+.observationContent ol li strong {
+  color: rgb(36, 35, 35);
+}
+
+.charter {
+  background: rgba(80, 111, 129, 0.1);
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.charter h3 {
+  color: rgb(36, 35, 35);
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.charter p {
+  color: rgb(87, 85, 85);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Why section */
+.why {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+}
+
+.whyGrid div {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.whyGrid h3 {
+  color: rgb(36, 35, 35);
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.whyGrid p {
+  color: rgb(87, 85, 85);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Tips section */
+.tips {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.tipsContent {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.tipsContent h3 {
+  color: rgb(36, 35, 35);
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.tipsContent h3:first-child {
+  margin-top: 0;
+}
+
+.tipsContent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.tipsContent ul li {
+  color: rgb(87, 85, 85);
+  font-size: 16px;
+  line-height: 2;
+  padding-left: 25px;
+  position: relative;
+}
+
+.tipsContent ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: rgb(80, 111, 129);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Conservation section */
+.conservation {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+}
+
+/* Infos section */
+.infos {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.infosGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+}
+
+.infosGrid div {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.infosGrid h3 {
+  color: rgb(36, 35, 35);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.infosGrid p {
+  color: rgb(87, 85, 85);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* CTA section */
+.cta {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.cta h2 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.cta button {
+  padding: 15px 35px;
+  border-radius: 8px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.cta button:hover {
+  background: white;
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seasonsGrid,
+  .speciesGrid,
+  .whyGrid,
+  .infosGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .header .title {
+    font-size: 35px;
+    letter-spacing: 5px;
+  }
+
+  .intro h2,
+  .seasons h2,
+  .species h2,
+  .observation h2,
+  .why h2,
+  .tips h2,
+  .conservation h2,
+  .infos h2 {
+    font-size: 32px;
+  }
+}
