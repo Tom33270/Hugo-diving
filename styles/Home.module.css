@@ -481,3 +481,210 @@
   border-bottom: 1px solid white;
 }
 
+/* ===== MEDIA QUERIES POUR MOBILE (iPhone 12 Pro et similaires) ===== */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  .btntete {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .buttonsRight {
+    width: auto;
+    gap: 10px;
+  }
+  
+  .title {
+    font-size: 30px;
+    letter-spacing: 8px;
+  }
+  
+  .menu {
+    font-size: 14px;
+  }
+  
+  /* Bottom section */
+  .bas {
+    margin-top: 200px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .titles {
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .title4 {
+    font-size: 35px;
+  }
+  
+  .titlebtm {
+    font-size: 22px;
+  }
+  
+  .btn_bas {
+    margin-right: 0;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Buttons */
+  .discover,
+  .buy {
+    width: 130px;
+    height: 40px;
+    margin: 10px;
+    font-size: 11px;
+  }
+  
+  /* Activity cards */
+  .snorkeling,
+  .plongee,
+  .cetaces,
+  .apnee {
+    width: 90%;
+    max-width: 350px;
+    height: 200px;
+    font-size: 24px;
+    border-radius: 25px;
+  }
+  
+  /* Modal */
+  .activites {
+    font-size: 40px;
+  }
+  
+  .modalContent {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+  }
+  
+  /* About section */
+  .about {
+    width: 95%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+  
+  .presentation {
+    margin-right: 0;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 30px;
+  }
+  
+  .about p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  
+  /* Why section */
+  .why {
+    padding: 40px 20px;
+  }
+  
+  .why h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .whyGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    font-size: 18px;
+  }
+  
+  /* Gallery */
+  .gallery {
+    padding: 40px 20px;
+  }
+  
+  .gallery h2 {
+    font-size: 30px;
+  }
+  
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .galleryGrid img {
+    height: 250px;
+  }
+  
+  /* Prices */
+  .prices {
+    padding: 40px 20px;
+  }
+  
+  .prices h2 {
+    font-size: 30px;
+  }
+  
+  .prices ul {
+    font-size: 18px;
+  }
+  
+  /* Species */
+  .species {
+    padding: 40px 20px;
+  }
+  
+  .species h2 {
+    font-size: 30px;
+  }
+  
+  .speciesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .speciesGrid img {
+    height: 120px;
+  }
+  
+  .speciesGrid p {
+    font-size: 16px;
+  }
+  
+  /* Contact */
+  .contact {
+    padding: 20px;
+  }
+  
+  .contact h2 {
+    font-size: 30px;
+  }
+  
+  .socials {
+    gap: 15px;
+  }
+  
+  .socials a {
+    font-size: 16px;
+  }
+  
+  /* Map container */
+  .mapContainer {
+    width: 95%;
+    height: 60%;
+  }
+  
+  /* Additional mobile optimizations */
+  .mainTitle p {
+    font-size: 14px;
+  }
+  
+  .location {
+    width: auto;
+  }
+}
