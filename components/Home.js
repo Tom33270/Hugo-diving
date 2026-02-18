@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faLocationDot, faPhotoFilm } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCreditCard, faLocationDot, faMailBulk, faMailReply, faPhotoFilm } from '@fortawesome/free-solid-svg-icons';
 import { Button } from 'antd';
 import { useState, useEffect, useRef } from 'react';
 import Modal from 'react-modal';
@@ -22,7 +22,9 @@ function Home() {
 
   const menu = <FontAwesomeIcon icon={faBars} />;
   const position = <FontAwesomeIcon icon={faLocationDot} />;
-  const panier = <FontAwesomeIcon icon={faPhotoFilm} />;
+  const photos = <FontAwesomeIcon icon={faPhotoFilm} />;
+  const tarifs = <FontAwesomeIcon icon={faCreditCard} />;
+  const contact = <FontAwesomeIcon icon={faMailBulk} />;
 
   const galleryImages = [
   "/image/surface.jpeg",
@@ -75,7 +77,7 @@ useEffect(() => {
 
     const marker = L.marker(saintGilles, { icon: baleineIcon })
       .addTo(mapRef.current)
-      .bindPopup("Hugo Diving - Local 3A, Avant Port, Port de Plaisance, 97434, La Réunion🐋");
+      .bindPopup("Hugo Diving - Local 3A, Avant Port, Port de Plaisance, 97434, La Réunion");
 
 
     marker.on('click', () => {
@@ -121,30 +123,25 @@ useEffect(() => {
               </button>
             </Modal>
 
-            <div className={styles.mainTitle}>
-              <h1 className={styles.title}> DIVING</h1>
-              <p>Saint-Gilles-les-Bains</p>
-            </div>
+           
 
-            <div className={styles.buttonsRight}>
+           
               <p className={styles.btnPosition} onClick={() => setOpenMap(true)}>
                 {position} maps
               </p>
-              <p className={styles.btnPanier}>{panier} photos</p>
-            </div>
+              <p className={styles.btnPhotos}>{photos} photos</p>
+              <p className={styles.btnTarifs} onClick={() => tarifsRef.current?.scrollIntoView({ behavior: 'smooth' })}>{tarifs} Tarifs</p>
+              <p className={styles.btnContact} onClick={() => router.push("/contact")}>{contact} Contact</p>
+           
           </div>
         </div>
 
-        <div className={styles.bas}>
-          <div className={styles.titles}>
-            <span className={styles.title4}>BEYOND</span>
-            <span className={styles.titlebtm}>OCEANS</span>
-          </div>
-          <div className={styles.btn_bas}>
-            <button className={styles.discover} onClick={() => tarifsRef.current?.scrollIntoView({ behavior: 'smooth' })}>TARIFS</button>
-            <button className={styles.buy}>RESERVATIONS</button>
-          </div>
-        </div>
+         <div className={styles.mainTitle}>
+              <h1 className={styles.title}>HUG'Ô DIVING</h1>
+              <p>Saint-Gilles-les-Bains, La Réunion</p>
+            </div>
+
+        
       </header>
     
       <Modal
@@ -166,33 +163,34 @@ useEffect(() => {
   <div className={styles.presentation}>
     <h2>Me, Myself and I</h2>
     <p>
-      Moniteur de plongée depuis 8 ans, j'ai travaillé en métropole à Banyuls-sur-Mer,
-      en Thaïlande et à La Réunion. Avec environ 4000 plongées entre 0 et 60 mètres,
-      je vous accompagne dans des expériences uniques sous-marines dans les eaux
-      exceptionnelles de La Réunion.
+      Dans l’enseignement depuis plus de 20 ans, comme professeur de tennis dans un premier temps, Mon parcours m’a mené de la Réunion à la Thaïlande, en passant par Banyuls-sur-Mer, pour vivre et enseigner ma passion de la plongée. Depuis 2017, je suis présent sur cette île magnifique et toujours avec la même envie de faire découvrir cette face peu connue qui grouille de vie ! 
+      Moniteur de plongée sous-marine professionnel,  je travaille en tant qu’indépendant sur le  Port de Saint-Gilles les Bains. 
+      Ce que j’aime le plus dans la plongée : Être dans l’instant présent, totalement connecté à l’environnement sous-marin, et me laisser surprendre par ses merveilles ! 
     </p>
-    <button className={styles.moreBtn} onClick={() => router.push("/profile")}>En savoir plus</button>
+    <button className={styles.moreBtn} onClick={() => router.push("/contact")}>Allez viens, on est bien ! </button>
   </div>
 </section>
 
 <section className={styles.why}>
-  <h2>Pourquoi choisir Hugo Diving?</h2>
+  <h2>Pourquoi Hug'ô Diving?</h2>
   <div className={styles.whyGrid}>
     <div>
       <h3>Certifications multiples</h3>
-      <p>DEJEPS E4, PADI, SDI/TDI, FFESSM, ANMP, PFI Apnée</p>
+      <p>- Diplôme d'état E4,<br></br>- Moniteur fédéral 1er degré<br></br>PADI, SDI/TDI, FFESSM, ANMP<br></br>- Moniteur d'apnée PFI<br></br>- Formateur permis bateau</p>
     </div>
     <div>
       <h3>Matériel Scubapro</h3>
-      <p>Équipement de qualité professionnelle, régulièrement entretenu</p>
+      <p>- Équipement de qualité,<br></br> régulièrement entretenu,<br></br>en excellent état.<br></br>
+      - Large choix.<br></br>- Locaux et bateaux<br></br> professionnels,<br></br>- douches et toilettes </p>
     </div>
     <div>
       <h3>Expérience internationale</h3>
-      <p>8 ans d'enseignement, 4000+ plongées dans le monde entier</p>
+      <p>-  + 4000  plongées dans le<br></br> monde entier<br></br>Enseigne en français et en anglais<br></br>20 années d'expériences dans l'enseignement à temps plein (je me fais vieux...)</p>
     </div>
     <div>
       <h3>Approche personnalisée</h3>
-      <p>Petits groupes, encadrement adapté à votre niveau</p>
+      <p>Petits groupes,<br>
+      </br> encadrement adapté à votre niveau</p>
     </div>
   </div>
 </section>
@@ -215,11 +213,22 @@ useEffect(() => {
 <section className={styles.prices} ref={tarifsRef}>
   <h2>Tarifs</h2>
   <ul>
-    <li>Baptême de Plongée — 80€</li>
-    <li>Initiation — 110€</li>
-    <li>Plongée Exploration (0-20m) — 60€</li>
-    <li>Plongées Profondes (jusqu'à 60m) — 60€</li>
-    <li>Option Nitrox — +15€</li>
+    <li className={styles.pricesList}>Randonnée Palmée (4 personnes mini / 1h) — 55 euros</li>
+    <li className={styles.pricesList}>Baptême (environ 25min) — 90 euros</li>
+    <li className={styles.pricesList}>PacPack découverte : un Baptême + une exploration (12m max) — 180 euros</li>
+    <li className={styles.pricesList}>Exploration (à partir du pe12) — 65 euros </li>
+    <li className={styles.pricesList}>Réadaptation (+ 1 an sans plonger) — 80 euros </li>
+    <li className={styles.pricesList}>Pack 3 plongées — 185 euros</li>
+    <li className={styles.pricesList}>Pack 6 plongées — 350 euros</li>
+    <li className={styles.pricesList}>Pack 10 plongées — 550 euros </li>
+    <li className={styles.pricesList}>Niveau 1 / Open water SDI (5plongées) — 490 euros </li>
+    <li className={styles.pricesList}>Formation Nitrox simple (2plongées) — 180 euros</li>
+    <li className={styles.pricesList}>Formation Nitrox confirmé (4 plongées) — 310 euros</li>
+    <li className={styles.pricesList}>Formation N2, N3, preparation monitorat, etc. — Sur devis</li>
+    <li className={styles.pricesList}>Sortie cétacés — Sur devis</li>
+    <li className={styles.pricesList}>Initiation apnée — Sur devis </li>
+    <li className={styles.pricesList}> Suppléments plongée de nuit— 15 euros</li>
+    <li className={styles.pricesList}>Supplément Nitrox — 10 euros</li>
   </ul>
   <button className={styles.otherBtn} onClick={() => router.push("/plongee")}>Voir toutes les formules</button>
 </section>

@@ -15,18 +15,26 @@
 }
 .mainTitle{
   display: flex;
+  width:100%;
+  height:100vh;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .mainTitle p {
-  font-size: 16px;
+  font-size: 24px;
+  color:white
 }
+
 .buttonsRight {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap:40px;
   align-items: center;
-  width: 200px;
+  width: 90%;
+ margin-left: 80px;
+ 
 }
 
 .mapContainer {
@@ -43,7 +51,7 @@
   left: 0;
   width: 100%;
   z-index: 998; 
-  background: rgba(0, 0, 0, 0.3); 
+  background: rgba(0, 0, 0, 0.7); 
   padding: 10px 0;
   display: flex;
   color: white;
@@ -58,9 +66,9 @@
   justify-content: center;
   align-items: center;
   font-family: avenir;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 15px;
-  font-size: 50px;
+  font-size: 100px;
   color: white;
 }
 
@@ -68,8 +76,13 @@
   background-color: transparent;
   color: white;
   font-size: 18px;
+  margin-left:10px
 }
 .menu:hover { color: grey; }
+
+.btnContact{
+  margin-right:10px
+}
 
 .bas {
   margin-top: 380px;
@@ -105,6 +118,10 @@
   flex-direction: row;
 }
 
+.whyGrid p{
+  text-align:justify;
+  margin:10px
+}
 /* ----- Buttons ----- */
 .discover {
   width: 150px;
@@ -145,8 +162,11 @@
 }
 
 /* Hover states for header buttons */
-.btnPanier:hover,
+
+.btnPhotos:hover,
 .btnPosition:hover,
+.btnTarifs:hover,
+.btnContact:hover,
 .btnLoggin:hover { color: grey; }
 
 /* ----- Activity cards ----- */
