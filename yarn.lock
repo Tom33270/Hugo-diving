@@ -351,12 +351,24 @@
   resolved "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-7.1.0.tgz"
   integrity sha512-l/BQM7fYntsCI//du+6sEnHOP6a74UixFyOYUyz2DLMXKx+6DEhfR3F2NYGE45XH1JJuIamacb4IZs9S0ZOWLA==
 
+"@fortawesome/fontawesome-common-types@7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-7.2.0.tgz#ae54831ab5974bc1a64e8b07410f2da2b4abf87f"
+  integrity sha512-IpR0bER9FY25p+e7BmFH25MZKEwFHTfRAfhOyJubgiDnoJNsSvJ7nigLraHtp4VOG/cy8D7uiV0dLkHOne5Fhw==
+
 "@fortawesome/fontawesome-svg-core@^7.1.0":
   version "7.1.0"
   resolved "https://registry.npmjs.org/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-7.1.0.tgz"
   integrity sha512-fNxRUk1KhjSbnbuBxlWSnBLKLBNun52ZBTcs22H/xEEzM6Ap81ZFTQ4bZBxVQGQgVY0xugKGoRcCbaKjLQ3XZA==
   dependencies:
     "@fortawesome/fontawesome-common-types" "7.1.0"
+
+"@fortawesome/free-brands-svg-icons@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-7.2.0.tgz#36f4306e671ad0acd23c1db96bde72e47d93e596"
+  integrity sha512-VNG8xqOip1JuJcC3zsVsKRQ60oXG9+oYNDCosjoU/H9pgYmLTEwWw8pE0jhPz/JWdHeUuK6+NQ3qsM4gIbdbYQ==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "7.2.0"
 
 "@fortawesome/free-solid-svg-icons@^7.1.0":
   version "7.1.0"
@@ -1451,6 +1463,13 @@ cliui@^8.0.1:
     string-width "^4.2.0"
     strip-ansi "^6.0.1"
     wrap-ansi "^7.0.0"
+
+cloudinary@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-2.9.0.tgz#d644c06f1b8569890ca394e55717dd239c2b2ad0"
+  integrity sha512-F3iKMOy4y0zy0bi5JBp94SC7HY7i/ImfTPSUV07iJmRzH1Iz8WavFfOlJTR1zvYM/xKGoiGZ3my/zy64In0IQQ==
+  dependencies:
+    lodash "^4.17.21"
 
 co@^4.6.0:
   version "4.6.0"
@@ -2806,6 +2825,11 @@ lodash@^4.17.15:
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
+lodash@^4.17.21:
+  version "4.17.23"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.23.tgz#f113b0378386103be4f6893388c73d0bde7f2c5a"
+  integrity sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==
+
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
@@ -2933,6 +2957,11 @@ node-releases@^2.0.26:
   version "2.0.27"
   resolved "https://registry.npmjs.org/node-releases/-/node-releases-2.0.27.tgz"
   integrity sha512-nmh3lCkYZ3grZvqcCH+fjmQ7X+H0OeZgP40OierEaAptX4XofMh5kwNbWh7lBduUzCcV/8kZ+NDLCwm2iorIlA==
+
+nodemailer@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-8.0.1.tgz#225842a5e3a06c4ee39adfdf784acd9e00bea9c2"
+  integrity sha512-5kcldIXmaEjZcHR6F28IKGSgpmZHaF1IXLWFTG+Xh3S+Cce4MiakLtWY+PlBU69fLbRa8HlaGIrC/QolUpHkhg==
 
 normalize-path@^3.0.0:
   version "3.0.0"

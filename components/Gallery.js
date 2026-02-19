@@ -1,25 +1,37 @@
 import styles from '../styles/Gallery.module.css';
 import { useRouter } from "next/router";
+import { useState, useEffect } from 'react';
 
-function Gallery(){
-      const router = useRouter();
-    
+function Gallery() {
+  const router = useRouter();
+  const [images, setImages] = useState([]);
 
-    return (
-<div className={styles.global}>
-    <section className={styles.header}>
+  useEffect(() => {
+    fetch('/api/photos')
+      .then(res => res.json())
+      .then(data => setImages(data));
+  }, []);
 
-         <h1 className={styles.title}> Gallery Page</h1>
-         <button onClick={() => router.push("/")}>Home</button>
-    </section>
+  return (
+    <div className={styles.global}>
+      
+      <section className={styles.header}>
+        <h1 className={styles.title}>Moments sous L'eau</h1>
+         <button onClick={() => router.push("/")}>Retour à l'accueil</button>
+      </section>
 
-    <section className={styles.main}>
+      <section className={styles.main}>
+        <div className={styles.grid}>
+          {images.map(img => (
+            <img key={img.public_id} src={img.secure_url} alt="" />
+          ))}
+        </div>
+        <button className={styles.btnHome} onClick={() => router.push("/")}>Retour à l'accueil</button>
+      </section>
+      
 
-    </section>
-</div>
- 
-
-    )
+    </div>
+  );
 }
 
-export default Gallery
+export default Gallery;

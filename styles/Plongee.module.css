@@ -8,6 +8,12 @@
   );
 }
 
+.location:hover{
+text-decoration: underline;
+cursor: pointer;
+font-weight: 600;
+}
+
 /* Header section */
 .header {
   display: flex;
@@ -17,9 +23,18 @@
   background-image: url('/image/diving.jpeg');
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  height: 75vh;
   position: relative;
   color: white;
+}
+.subTitle {
+  color: white;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 600;
 }
 
 .header::after {
@@ -93,7 +108,7 @@
   text-align: center;
   font-size: 40px;
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 4px;
 }
 
 .formulesGrid {
@@ -165,6 +180,7 @@
   text-align: center;
   max-width: 600px;
   margin: auto;
+  margin-bottom: 10px;
 }
 
 .option h3 {

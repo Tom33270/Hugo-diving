@@ -26,7 +26,7 @@ function Snorkeling(){
             <h2>Une Expérience Guidée et Sécurisée</h2>
             <p>
                 En tant que guide expérimenté, je vous accompagne sur les plus beaux spots de Saint-Gilles-les-Bains.
-                Avec plus de 20 ans d'expérience et une connaissance approfondie des sites, je vous emmène à la
+                Avec plusieurs années d'expérience et une connaissance approfondie des sites, je vous emmène à la
                 rencontre de la faune et de la flore locale tout en vous transmettant les bonnes pratiques
                 d'observation et de respect de l'environnement.
             </p>
@@ -55,17 +55,18 @@ function Snorkeling(){
         </div>
 
         <div className={styles.spots}>
-            <h2>Nos Sites de Randonnée</h2>
+            <h2>Nos Sites de Randonnée Palmée</h2>
             <div className={styles.spotsContent}>
                 <p>
                     Les eaux cristallines de Saint-Gilles-les-Bains abritent plusieurs spots
                     exceptionnels pour la randonnée palmée :
                 </p>
                 <ul>
-                    <li>L'Hermitage : récif peu profond idéal pour les débutants</li>
-                    <li>La Saline : tombants accessibles et grande biodiversité</li>
-                    <li>Trou d'Eau : site protégé avec forte concentration de vie marine</li>
-                    <li>Boucan Canot : observations de tortues garanties (en saison)</li>
+                    
+                    <li><strong>Cap L'Houssaye </strong>: plongée au cœur d’un relief volcanique spectaculaire, entre arches, failles et poissons tropicaux.</li>
+                    <li><strong>Canyon</strong> :  exploration d’un véritable labyrinthe naturel, avec descentes entre les parois rocheuses et bancs de poissons colorés.</li>
+                    <li><strong>Pain De Sucre </strong> : un jardin corallien lumineux, idéal pour observer une grande diversité de poissons et de coraux.</li>
+                    <li><strong>Boucan Canot </strong>: observations de tortues garanties (en saison)</li>
                 </ul>
             </div>
         </div>
@@ -95,7 +96,7 @@ function Snorkeling(){
         <div className={styles.ideal}>
             <h2>Idéal Pour</h2>
             <ul>
-                <li>Les familles avec enfants (à partir de 6 ans)</li>
+                <li>Les familles avec enfants (à partir de 8 ans)</li>
                 <li>Les personnes souhaitant découvrir le monde sous-marin</li>
                 <li>Les groupes d'amis en quête d'activités nature</li>
                 <li>Ceux qui veulent observer sans plonger profond</li>
@@ -123,10 +124,10 @@ function Snorkeling(){
 
                 <p>À savoir :</p>
                 <ul>
-                    <li>Durée moyenne : 1h30 à 2h (incluant briefing et équipement)</li>
+                    <li>Durée moyenne : 2h30 (incluant briefing, temps dans l'eau et équipement)</li>
                     <li>Temps dans l'eau : environ 1h</li>
                     <li>Niveau requis : savoir nager</li>
-                    <li>Accessible dès 6 ans accompagné d'un adulte</li>
+                    <li>Accessible dès 8 ans accompagné d'un adulte</li>
                 </ul>
             </div>
         </div>
@@ -136,7 +137,7 @@ function Snorkeling(){
             <div className={styles.infosGrid}>
                 <div>
                     <h3>Lieu de Rendez-vous</h3>
-                    <p>Plage de l'Hermitage - Saint-Gilles-les-Bains</p>
+                    <p>Club de plongée Escapade sur le port de Saint Gilles </p>
                 </div>
                 <div>
                     <h3>Horaires</h3>
@@ -144,11 +145,11 @@ function Snorkeling(){
                 </div>
                 <div>
                     <h3>Groupe</h3>
-                    <p>Maximum 8 personnes pour un encadrement optimal</p>
+                    <p>Minimum 4 personne / Maximum 8 personnes</p>
                 </div>
                 <div>
                     <h3>Tarif</h3>
-                    <p>À partir de 40€/personne - Tarif famille disponible</p>
+                    <p>À partir de 55€/personne</p>
                 </div>
             </div>
         </div>

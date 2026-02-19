@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faCreditCard, faLocationDot, faMailBulk, faMailReply, faPhotoFilm } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCreditCard, faLocationDot, faMailBulk, faPhotoFilm } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { Button } from 'antd';
 import { useState, useEffect, useRef } from 'react';
 import Modal from 'react-modal';
@@ -25,19 +26,40 @@ function Home() {
   const photos = <FontAwesomeIcon icon={faPhotoFilm} />;
   const tarifs = <FontAwesomeIcon icon={faCreditCard} />;
   const contact = <FontAwesomeIcon icon={faMailBulk} />;
+  const instagram = <FontAwesomeIcon icon={faInstagram} />;
+const [Images, setImages] = useState([]);
+const [randomImages, setRandomImages] = useState([]);
 
-  const galleryImages = [
-  "/image/surface.jpeg",
-  "/image/bubbles.jpeg",
-  "/image/dauphin.jpeg",
-  "/image/baleine.jpg",
-  "/image/tortue.jpg",
-  "/image/raie.jpg",
-];
+useEffect(() => {
+  fetch('/api/photos')
+    .then(res => res.json())
+    .then(data => {
+      setImages(data);
 
-const randomImages = [...galleryImages]
-  .sort(() => Math.random() - 0.5)
-  .slice(0, 3);
+      // Tirage initial
+      const firstRandom = [...data]
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3);
+
+      setRandomImages(firstRandom);
+    });
+}, []);
+
+useEffect(() => {
+  if (Images.length === 0) return;
+
+  const interval = setInterval(() => {
+    const newRandom = [...Images]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3);
+
+    setRandomImages(newRandom);
+  }, 4000);
+
+  return () => clearInterval(interval);
+}, [Images]);
+
+
 
 
 
@@ -103,9 +125,9 @@ useEffect(() => {
       <header className={styles.header}>
         <div className={styles.tete}>
           <div className={styles.btntete}>
-            <Button className={styles.menu} onClick={() => setOpen(true)}>
+            <p className={styles.menu} onClick={() => setOpen(true)}>
               {menu}Menu
-            </Button>
+            </p>
 
           
             <Modal
@@ -115,6 +137,7 @@ useEffect(() => {
               shouldCloseOnOverlayClick={true}
               className={styles.customModal}
               overlayClassName={styles.customOverlay}
+              
             >
               <h2 className={styles.activites}>Les différentes activitées</h2>
               {modalContent}
@@ -129,7 +152,7 @@ useEffect(() => {
               <p className={styles.btnPosition} onClick={() => setOpenMap(true)}>
                 {position} maps
               </p>
-              <p className={styles.btnPhotos}>{photos} photos</p>
+              <p className={styles.btnPhotos}onClick={()=> router.push("/gallery")}>{photos} Galerie</p>
               <p className={styles.btnTarifs} onClick={() => tarifsRef.current?.scrollIntoView({ behavior: 'smooth' })}>{tarifs} Tarifs</p>
               <p className={styles.btnContact} onClick={() => router.push("/contact")}>{contact} Contact</p>
            
@@ -137,7 +160,7 @@ useEffect(() => {
         </div>
 
          <div className={styles.mainTitle}>
-              <h1 className={styles.title}>HUG'Ô DIVING</h1>
+              <h1 className={styles.title}>HUG'O₂ DIVING</h1>
               <p>Saint-Gilles-les-Bains, La Réunion</p>
             </div>
 
@@ -172,7 +195,7 @@ useEffect(() => {
 </section>
 
 <section className={styles.why}>
-  <h2>Pourquoi Hug'ô Diving?</h2>
+  <h2>Pourquoi Hug'O₂ Diving?</h2>
   <div className={styles.whyGrid}>
     <div>
       <h3>Certifications multiples</h3>
@@ -198,13 +221,15 @@ useEffect(() => {
 <section className={styles.gallery}>
   <h2 className={styles.underWater}>Moments sous l'eau</h2>
  <div className={styles.galleryGrid}>
-  {randomImages.map((src, index) => (
-    <img
-      key={index}
-      src={src}
-      onClick={() => router.push("/gallery")}
-    />
-  ))}
+ {randomImages.map((img, index) => (
+  <img
+    key={index}
+    src={img.secure_url}
+    alt=""
+    onClick={() => router.push("/gallery")}
+  />
+))}
+
 </div>
 
   <button className={styles.otherBtn} onClick={() => router.push("/gallery")}>Voir la galerie</button>
@@ -214,8 +239,8 @@ useEffect(() => {
   <h2>Tarifs</h2>
   <ul>
     <li className={styles.pricesList}>Randonnée Palmée (4 personnes mini / 1h) — 55 euros</li>
-    <li className={styles.pricesList}>Baptême (environ 25min) — 90 euros</li>
-    <li className={styles.pricesList}>PacPack découverte : un Baptême + une exploration (12m max) — 180 euros</li>
+    <li className={styles.pricesList}>Baptême (environ 25min) — 85 euros</li>
+    <li className={styles.pricesList}>Pack découverte : un Baptême + une Initiation (12m max) — 180 euros</li>
     <li className={styles.pricesList}>Exploration (à partir du pe12) — 65 euros </li>
     <li className={styles.pricesList}>Réadaptation (+ 1 an sans plonger) — 80 euros </li>
     <li className={styles.pricesList}>Pack 3 plongées — 185 euros</li>
@@ -245,14 +270,30 @@ useEffect(() => {
 
 <section className={styles.contact}>
   <h2>Contact</h2>
-  <p>📍 Club Escapade Plongée</p>
-  <p ><span onClick={() => setOpenMap(true)} className={styles.location}>Saint-Gilles-les-Bains, La Réunion</span></p>
+  <p className={styles.location} onClick={() =>
+    window.open(
+      "https://www.google.com/maps/dir/?api=1&destination=Escapade+Plong%C3%A9e,+2+Rue+du+Port,+Saint-Gilles+les+Bains,+La+R%C3%A9union",
+      "_blank"
+    )
+  }
+> {position} Club Escapade Plongée - Saint-Gilles-les-Bains</p>
+<p className={styles.location} onClick={() =>
+    window.open(
+      "https://www.instagram.com/hug_o_diving/"
+    )
+  }>{instagram}hug_o diving</p>
   <div className={styles.socials}>
-    <a>Réservations</a>
     <a>Me contacter</a>
+    
   </div>
 </section>
+<div className={styles.footer}>
+      <p>№ SIRET: 92148663500029</p>
+      <p>hugodiving974@gmail.com</p>
+
     </div>
+    </div>
+    
   </div>
   );
 }

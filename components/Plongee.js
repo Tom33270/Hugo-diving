@@ -7,10 +7,10 @@ function Plongee(){
 
     return (
 <div className={styles.global}>
-    <section className={styles.header}>
-         <h1 className={styles.title}>Plongée Bouteille</h1>
+    <div className={styles.header}>
+         <h1 className={styles.title}>Plongée Bouteille </h1>
          <button onClick={() => router.push("/")}>Retour à l'accueil</button>
-    </section>
+    </div>
 
     <section className={styles.main}>
         <div className={styles.intro}>
@@ -23,14 +23,15 @@ function Plongee(){
         </div>
 
         <div className={styles.formules}>
-            <h2>Nos Formules de Plongée</h2>
+            <h2 className={styles.h2title}>Nos Formules de Plongée</h2>
+             <p className={styles.subTitle}>à partir de 8 ans</p>
 
             <div className={styles.formulesGrid}>
                 <div className={styles.formuleCard}>
                     <h3>Baptême de Plongée</h3>
-                    <p className={styles.price}>80€ / personne</p>
+                    <p className={styles.price}>85€ / personne</p>
                     <ul>
-                        <li>Durée : 30 minutes sous l'eau</li>
+                        <li>Durée : environ 25 minutes sous l'eau</li>
                         <li>1 personne à la fois (2 personnes max par session)</li>
                         <li>Aucun pré-requis nécessaire</li>
                         <li>Tout le matériel fourni</li>
@@ -60,7 +61,7 @@ function Plongee(){
 
                 <div className={styles.formuleCard}>
                     <h3>Plongée Exploration</h3>
-                    <p className={styles.price}>60€ / personne</p>
+                    <p className={styles.price}>65€ / personne</p>
                     <ul>
                         <li>Durée : 1 heure</li>
                         <li>1 à 4 personnes maximum</li>
@@ -74,26 +75,32 @@ function Plongee(){
                     </p>
                 </div>
 
-                <div className={styles.formuleCard}>
-                    <h3>Plongées Profondes</h3>
-                    <p className={styles.price}>60€ / personne</p>
+               
+                 <div className={styles.formuleCard}>
+                    <h3>Pack plongées</h3>
+                    <p className={styles.price}>à partir de 185€/ personne</p>
                     <ul>
-                        <li>Profondeur : jusqu'à 60 mètres</li>
-                        <li>Jusqu'à 40m : 1 à 4 personnes</li>
-                        <li>40 à 60m : 2 personnes maximum</li>
-                        <li>Niveau requis : certification profonde</li>
-                        <li>Sites exceptionnels</li>
+                        <li>Pack 3 plongées - 185€/personne</li>
+                        <li>Pack 6 plongées - 350€/personne</li>
+                        <li>Pack 10 plongées - 550€/personne</li>
+                        <li>Niveau requis : tout niveau</li>
+                        <li>Tout le matériel fourni</li>
+                        <li>Encadrement personnalisé</li>
                     </ul>
                     <p className={styles.description}>
-                        Explorez les tombants et les sites profonds de La Réunion
-                        avec un moniteur expérimenté (4000 plongées).
+                        Fait pour les adeptes et plongeurs souhaitant parfaire leurs compétences au vu de passage de niveau de plongée.
                     </p>
                 </div>
+                 
             </div>
 
             <div className={styles.option}>
-                <h3>Option Nitrox</h3>
-                <p>Supplément de 15€ - Pour des plongées plus longues et plus sûres</p>
+                <h3>Supplément Nitrox</h3>
+                <p>Supplément de 10€ - Pour des plongées plus longues et plus sûres</p>
+            </div>
+             <div className={styles.option}>
+                <h3>Supplément plongée de nuit</h3>
+                <p>Supplément de 15€ - Pour des plongées qui diffèrent de l'ordinaire</p>
             </div>
         </div>
 
@@ -102,7 +109,13 @@ function Plongee(){
             <div className={styles.infosGrid}>
                 <div>
                     <h3>Lieu de Départ</h3>
-                    <p>Club Escapade Plongée - Saint-Gilles-les-Bains</p>
+                    <p className={styles.location} onClick={() =>
+    window.open(
+      "https://www.google.com/maps/dir/?api=1&destination=Escapade+Plong%C3%A9e,+2+Rue+du+Port,+Saint-Gilles+les+Bains,+La+R%C3%A9union",
+      "_blank"
+    )
+  }
+> Club Escapade Plongée - Saint-Gilles-les-Bains</p>
                 </div>
                 <div>
                     <h3>Sites de Plongée</h3>
@@ -122,9 +135,14 @@ function Plongee(){
         <div className={styles.cta}>
             <h2>Prêt à plonger ?</h2>
             <p>Contactez-moi pour réserver votre plongée</p>
-            <button onClick={() => router.push("/")}>Réserver maintenant</button>
+            <button onClick={() => router.push("/contact")}>Réserver maintenant</button>
         </div>
     </section>
+    <div className={styles.footer}>
+      <p>№ SIRET: 92148663500029</p>
+      <p>hugodiving974@gmail.com</p>
+
+    </div>
 </div>
 
 
