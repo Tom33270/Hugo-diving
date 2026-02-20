@@ -79,7 +79,7 @@
 .program h2,
 .infos h2 {
   font-size: 40px;
-  color: white;
+   color: rgb(87, 85, 85);
   margin-bottom: 20px;
 }
 
@@ -90,7 +90,7 @@
   line-height: 1.6;
   max-width: 800px;
   margin: auto;
-  color: rgb(240, 240, 240);
+  color: rgb(0, 0, 0);
 }
 
 /* Benefits section */

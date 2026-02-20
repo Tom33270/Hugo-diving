@@ -98,7 +98,7 @@
   margin: 40px auto 60px auto;
   padding: 12px 25px;
   border-radius: 8px;
-  border: 1px solid white;
+  border: 1px solid transparent;
   background: transparent;
   color: white;
   cursor: pointer;
@@ -107,7 +107,7 @@
 }
 
 .btnHome:hover {
-  background: white;
+  background: transparent;
   color: black;
 }
 
