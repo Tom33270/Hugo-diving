@@ -55,7 +55,7 @@
   background: rgba(0, 0, 0, 0.7); 
   padding: 10px 0;
   display: flex;
-  color: white;
+  color: rgb(80, 111, 129);
   font-size: 16px;
   flex-direction: row;
   align-items: center;
@@ -76,12 +76,13 @@
 
 .menu {
   background-color: transparent;
-  color: white;
+  color: rgb(80, 111, 129);
+  
   font-size: 14px;
   margin-left:10px;
   cursor: pointer;
 }
-.menu:hover { color: grey; }
+.menu:hover { color: white; }
 
 .btnContact{
   margin-right:10px
@@ -170,7 +171,7 @@
 .btnPosition:hover,
 .btnTarifs:hover,
 .btnContact:hover,
-.btnLoggin:hover { color: grey;  cursor: pointer; }
+.btnLoggin:hover { color: white;  cursor: pointer;font-size: 20px; }
 
 .prices {
   list-style: none;
@@ -188,7 +189,7 @@
 }
 
 .prices li strong {
-  color: rgb(80, 111, 129);
+  color: rgb(255, 255, 255);
 }
 
 /* ----- Activity cards ----- */
@@ -213,6 +214,10 @@
 .plongee   { background-image: url('/image/diving.jpeg'); }
 .cetaces   { background-image: url('/image/cetaces.jpeg'); }
 .apnee      {background-image: url('/image/apnee.jpeg');}
+
+.imgHugo{
+  width: 30vw;
+}
 
 .snorkeling::after,
 .plongee::after,

@@ -160,7 +160,7 @@ useEffect(() => {
         </div>
 
          <div className={styles.mainTitle}>
-              <h1 className={styles.title}>HUG'O₂ DIVING</h1>
+              <img src='/image/transparent-logo.png' className={styles.imgHugo}></img>
               <p>Saint-Gilles-les-Bains, La Réunion</p>
             </div>
 
@@ -268,7 +268,7 @@ useEffect(() => {
     <div><img src="/image/raie.jpg" onClick={() => router.push("/wikipage")}/><p>poisson 4</p></div>
   </div>
 </section>
-<h2 className={styles.titleContact}>Contact</h2>
+  <h2 className={styles.titleContact}>Contact</h2>
 <section className={styles.contact}>
   
   <p className={styles.location} onClick={() =>
