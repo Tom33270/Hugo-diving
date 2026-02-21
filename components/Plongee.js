@@ -1,8 +1,13 @@
 import styles from '../styles/Plongee.module.css';
 import { useRouter } from "next/router";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
+
 
 function Plongee(){
      const router = useRouter();
+
+     const warning = <FontAwesomeIcon icon={faExclamationTriangle} />;
 
 
     return (
@@ -116,6 +121,7 @@ function Plongee(){
     )
   }
 > Club Escapade Plongée - Saint-Gilles-les-Bains</p>
+<p>(cliquez-moi)</p>
                 </div>
                 <div>
                     <h3>Sites de Plongée</h3>
@@ -130,11 +136,21 @@ function Plongee(){
                     <p>Bateaux spacieux, douches, toilettes et café disponibles</p>
                 </div>
             </div>
+            <h2><span>{warning}</span> Avant de plonger <span>{warning}</span></h2>
+            <div className={styles.infosGrid2}>
+              <div>
+                    <h3>Veuillez consulter ce document avant toute plongée.</h3>
+                    <a href="/documents/Contre_indications_plongée.pdf" download>
+      📄 Télécharger le document PDF
+    </a>
+
+                </div>
+                </div>
         </div>
 
         <div className={styles.cta}>
             <h2>Prêt à plonger ?</h2>
-            <p>Contactez-moi pour réserver votre plongée</p>
+           <br></br>
             <button onClick={() => router.push("/contact")}>Réserver maintenant</button>
         </div>
     </section>

@@ -258,7 +258,7 @@ useEffect(() => {
 </ul>
   <button className={styles.otherBtn} onClick={() => router.push("/plongee")}>Voir toutes les formules</button>
 </section>
-
+{/* 
 <section className={styles.species}>
   <h2>Rencontrez les espèces</h2>
   <div className={styles.speciesGrid}>
@@ -267,7 +267,7 @@ useEffect(() => {
     <div><img src="/image/tortue.jpg" onClick={() => router.push("/wikipage")}/><p>poisson 3</p></div>
     <div><img src="/image/raie.jpg" onClick={() => router.push("/wikipage")}/><p>poisson 4</p></div>
   </div>
-</section>
+</section> */}
   <h2 className={styles.titleContact}>Contact</h2>
 <section className={styles.contact}>
   

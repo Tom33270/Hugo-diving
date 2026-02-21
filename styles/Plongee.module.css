@@ -19,6 +19,13 @@ font-weight: 600;
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  font-size: 14px;
+}
+
+.infosGrid2 a {
+  color: #007A9E;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 
@@ -221,6 +228,29 @@ font-weight: 600;
   max-width: 800px;
   margin: auto;
 }
+
+.infosGrid2{
+  
+  display: flex;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 800px;
+  margin: auto;
+  
+
+}
+.infosGrid2 div {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 3px solid yellow;
+}
+.infos span{
+  color:yellow
+}
+
 
 .infosGrid div {
   background: rgba(255, 255, 255, 0.9);

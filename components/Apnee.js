@@ -97,7 +97,7 @@ function Apnee(){
                 </div>
                 <div>
                     <h3>Matériel</h3>
-                    <p>Palmes, masque et tuba fournis (équipement de qualité)</p>
+                    <p>Palmes, masque et tuba fournis</p>
                 </div>
                 <div>
                     <h3>Niveau Requis</h3>
@@ -105,14 +105,22 @@ function Apnee(){
                 </div>
                 <div>
                     <h3>Groupe</h3>
-                    <p>Cours en petit groupe pour un suivi personnalisé</p>
+                    <p>Cours en petit groupe pour un suivi personnalisé (4 personnes maximum)</p>
+                </div>
+                 <div>
+                    <h3>Tarifs</h3>
+                    <p>Sur devis</p>
+                </div>
+                <div>
+                    <h3>Durée</h3>
+                    <p>1h dans l'eau</p>
                 </div>
             </div>
         </div>
 
         <div className={styles.cta}>
             <h2>Prêt à Découvrir l'Apnée ?</h2>
-            <p>Contactez-moi pour planifier votre initiation</p>
+            <br></br>
             <button onClick={() => router.push("/contact")}>Me Contacter</button>
         </div>
         <div className={styles.footer}>

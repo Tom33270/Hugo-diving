@@ -17,7 +17,7 @@ function Cetaces(){
             <h2>À la Rencontre des Géants des Mers</h2>
             <p>
                 La Réunion est un sanctuaire pour les cétacés. De juin à octobre, baleines à bosse,
-                dauphins long-bec, grands dauphins et dauphins tachetés évoluent dans les eaux de l'île.
+                dauphins long-bec, dauphins Aduncus et dauphins Truncatus évoluent dans les eaux de l'île.
                 Partez pour une expérience respectueuse et émouvante d'observation de ces mammifères marins
                 dans leur habitat naturel.
             </p>
@@ -78,7 +78,7 @@ function Cetaces(){
                     <h3>3. Observation Respectueuse</h3>
                     <p>
                         Approche progressive et douce. Maintien des distances règlementaires. Moteurs au
-                        ralenti ou coupés. Observation passive privilégiée.
+                        ralenti. Observation passive privilégiée.
                     </p>
                 </div>
 
@@ -151,10 +151,11 @@ function Cetaces(){
 
         <div className={styles.infos}>
             <h2>Informations Pratiques</h2>
+            <p>à partir de 12 ans    </p>
             <div className={styles.infosGrid}>
                 <div>
                     <h3>Durée</h3>
-                    <p>3 à 4 heures en mer (selon observations)</p>
+                    <p>2h30 et 3 heures en mer (selon observations)</p>
                 </div>
                 <div>
                     <h3>Départ</h3>
@@ -162,7 +163,7 @@ function Cetaces(){
                 </div>
                 <div>
                     <h3>Groupe</h3>
-                    <p>12 personnes maximum par sortie</p>
+                    <p>6 personnes maximum (à partir de 4 personnes)</p>
                 </div>
                 <div>
                     <h3>Matériel Fourni</h3>
@@ -170,18 +171,18 @@ function Cetaces(){
                 </div>
                 <div>
                     <h3>À Apporter</h3>
-                    <p>Crème solaire bio, casquette, eau, appareil photo</p>
+                    <p>Crème solaire bio,lunettes de soleil, casquette, eau, appareil photo</p>
                 </div>
                 <div>
                     <h3>Tarif</h3>
-                    <p>110€/personne - Réduction famille disponible</p>
+                    <p>110€/personne </p>
                 </div>
             </div>
         </div>
 
         <div className={styles.cta}>
             <h2>Prêt pour cette Expérience Unique ?</h2>
-            <p>Réservez votre sortie d'observation des cétacés</p>
+           <br></br>
             <button onClick={() => router.push("/contact")}>Me Contacter</button>
         </div>
         <div className={styles.footer}>

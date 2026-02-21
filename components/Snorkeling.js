@@ -156,7 +156,7 @@ function Snorkeling(){
 
         <div className={styles.cta}>
             <h2>Prêt pour l'Aventure ?</h2>
-            <p>Réservez votre randonnée palmée dès maintenant</p>
+           <br></br>
             <button onClick={() => router.push("/contact")}>Me Contacter</button>
         </div>
         <div className={styles.footer}>
