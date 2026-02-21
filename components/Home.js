@@ -139,7 +139,7 @@ useEffect(() => {
               overlayClassName={styles.customOverlay}
               
             >
-              <h2 className={styles.activites}>Les différentes activitées</h2>
+              <h2 className={styles.activities}>Les différentes activitées</h2>
               {modalContent}
               <button onClick={() => setOpen(false)} className={styles.closingButton}>
                 Fermer

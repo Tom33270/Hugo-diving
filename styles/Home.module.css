@@ -23,7 +23,7 @@
 }
 
 .mainTitle h1{
-  font-size: 70px;
+  font-size: 60px;
   color: rgb(240, 223, 205)
 }
 .mainTitle p {
@@ -636,12 +636,23 @@ font-size: 40px;
   }
   
   .modalContent {
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
-    padding: 20px;
-     cursor: pointer;
-  }
+  display: flex;
+  flex-wrap: wrap;         /* Permet le retour à la ligne */
+  justify-content: center; /* Centrage horizontal */
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.modalContent > div {
+  flex: 0 1 calc(50% - 15px); /* Deux éléments par ligne avec l'écart */
+  box-sizing: border-box;
+}
+.activities{
+  text-align: center;
+  color:white
+}
   
   /* About section */
   .about {
@@ -762,6 +773,11 @@ font-size: 40px;
   .mainTitle p {
     font-size: 14px;
   }
+  .mainTitle h1{
+    font-size:24px;
+    text-align: center;
+  }
+ 
   
   .location {
     width: auto;
