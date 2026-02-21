@@ -140,7 +140,6 @@ function Plongee(){
     </section>
     <div className={styles.footer}>
       <p>№ SIRET: 92148663500029</p>
-      <p>hugodiving974@gmail.com</p>
 
     </div>
 </div>

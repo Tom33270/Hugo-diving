@@ -79,7 +79,7 @@
 .program h2,
 .infos h2 {
   font-size: 40px;
-  color:rgb(65, 63, 63);
+  color:rgb(65, 63, 63);  
   margin-bottom: 20px;
 }
 
@@ -118,6 +118,14 @@
 .benefitsGrid div:hover {
   transform: translateY(-5px);
 }
+.footer{
+  color:rgb(240, 223, 205);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
 
 .benefitsGrid h3 {
   color: rgb(36, 35, 35);

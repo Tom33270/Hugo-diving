@@ -184,6 +184,11 @@ function Cetaces(){
             <p>Réservez votre sortie d'observation des cétacés</p>
             <button onClick={() => router.push("/contact")}>Me Contacter</button>
         </div>
+        <div className={styles.footer}>
+      <p>№ SIRET: 92148663500029</p>
+      
+
+    </div>
     </section>
 </div>
 

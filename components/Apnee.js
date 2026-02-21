@@ -115,6 +115,11 @@ function Apnee(){
             <p>Contactez-moi pour planifier votre initiation</p>
             <button onClick={() => router.push("/contact")}>Me Contacter</button>
         </div>
+        <div className={styles.footer}>
+      <p>№ SIRET: 92148663500029</p>
+      
+
+    </div>
     </section>
 </div>
 

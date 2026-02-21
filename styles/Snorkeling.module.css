@@ -220,6 +220,15 @@
   
 }
 
+.footer{
+  color:rgb(240, 223, 205);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+
 .ideal ul li {
   color:rgb(87, 85, 85);
   font-size: 18px;

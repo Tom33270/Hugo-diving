@@ -116,6 +116,14 @@
 .step h3, .step p {
   color:rgb(65, 63, 63);
 }
+.footer{
+  color:rgb(240, 223, 205);
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .seasonsGrid {
   display: grid;

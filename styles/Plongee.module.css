@@ -13,6 +13,14 @@ text-decoration: underline;
 cursor: pointer;
 font-weight: 600;
 }
+.footer{
+  color:rgb(240, 223, 205);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
 
 /* Header section */
 .header {

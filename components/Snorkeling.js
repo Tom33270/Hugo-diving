@@ -159,6 +159,11 @@ function Snorkeling(){
             <p>Réservez votre randonnée palmée dès maintenant</p>
             <button onClick={() => router.push("/contact")}>Me Contacter</button>
         </div>
+        <div className={styles.footer}>
+      <p>№ SIRET: 92148663500029</p>
+      
+
+    </div>
     </section>
 </div>
 

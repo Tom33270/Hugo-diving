@@ -23,6 +23,14 @@
   margin-bottom: 30px;
   color:  rgb(80, 111, 129)
 }
+.footer{
+  color:rgb(240, 223, 205);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
 
 /* Intro text optionnel */
 .intro {

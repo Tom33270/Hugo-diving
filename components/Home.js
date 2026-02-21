@@ -150,7 +150,7 @@ useEffect(() => {
 
            
               <p className={styles.btnPosition} onClick={() => setOpenMap(true)}>
-                {position} maps
+                {position} Maps
               </p>
               <p className={styles.btnPhotos}onClick={()=> router.push("/gallery")}>{photos} Galerie</p>
               <p className={styles.btnTarifs} onClick={() => tarifsRef.current?.scrollIntoView({ behavior: 'smooth' })}>{tarifs} Tarifs</p>
@@ -160,7 +160,7 @@ useEffect(() => {
         </div>
 
          <div className={styles.mainTitle}>
-              <img src='/image/transparent-logo.png' className={styles.imgHugo}></img>
+              <h1>Hug'O₂ Diving</h1>
               <p>Saint-Gilles-les-Bains, La Réunion</p>
             </div>
 
