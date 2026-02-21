@@ -195,7 +195,7 @@ useEffect(() => {
 </section>
 
 <section className={styles.why}>
-  <h2>Pourquoi Hug'O₂ Diving?</h2>
+  <h2>Pourquoi choisir Hug'O₂ Diving?</h2>
   <div className={styles.whyGrid}>
     <div>
       <h3>Certifications multiples</h3>
@@ -237,25 +237,25 @@ useEffect(() => {
 
 <section className={styles.prices} ref={tarifsRef}>
   <h2>Tarifs</h2>
-  <ul>
-    <li className={styles.pricesList}>Randonnée Palmée (4 personnes mini / 1h) — 55 euros</li>
-    <li className={styles.pricesList}>Baptême (environ 25min) — 85 euros</li>
-    <li className={styles.pricesList}>Initiation (45min à 1h) — 110 euros</li>
-    <li className={styles.pricesList}>Pack découverte : un Baptême + une Initiation (12m max) — 180 euros</li>
-    <li className={styles.pricesList}>Exploration (à partir du pe12) — 65 euros </li>
-    <li className={styles.pricesList}>Réadaptation (+ 1 an sans plonger) — 80 euros </li>
-    <li className={styles.pricesList}>Pack 3 plongées — 185 euros</li>
-    <li className={styles.pricesList}>Pack 6 plongées — 350 euros</li>
-    <li className={styles.pricesList}>Pack 10 plongées — 550 euros </li>
-    <li className={styles.pricesList}>Niveau 1 / Open water SDI (5plongées) — 490 euros </li>
-    <li className={styles.pricesList}>Formation Nitrox simple (2plongées) — 180 euros</li>
-    <li className={styles.pricesList}>Formation Nitrox confirmé (4 plongées) — 310 euros</li>
-    <li className={styles.pricesList}>Formation N2, N3, preparation monitorat, etc. — Sur devis</li>
-    <li className={styles.pricesList}>Sortie cétacés — Sur devis</li>
-    <li className={styles.pricesList}>Initiation apnée — Sur devis </li>
-    <li className={styles.pricesList}> Suppléments plongée de nuit— 15 euros</li>
-    <li className={styles.pricesList}>Supplément Nitrox — 10 euros</li>
-  </ul>
+<ul class="prices">
+  <li><span>Randonnée Palmée (4 personnes mini / 1h)</span><strong>55 euros</strong></li>
+  <li><span>Baptême (environ 25min)</span><strong>85 euros</strong></li>
+  <li><span>Initiation (45min à 1h)</span><strong>110 euros</strong></li>
+  <li><span>Pack découverte : un Baptême + une Initiation (12m max)</span><strong>180 euros</strong></li>
+  <li><span>Exploration (à partir du pe12)</span><strong>65 euros</strong></li>
+  <li><span>Réadaptation (+ 1 an sans plonger)</span><strong>80 euros</strong></li>
+  <li><span>Pack 3 plongées</span><strong>185 euros</strong></li>
+  <li><span>Pack 6 plongées</span><strong>350 euros</strong></li>
+  <li><span>Pack 10 plongées</span><strong>550 euros</strong></li>
+  <li><span>Niveau 1 / Open water SDI (5 plongées)</span><strong>490 euros</strong></li>
+  <li><span>Formation Nitrox simple (2 plongées)</span><strong>180 euros</strong></li>
+  <li><span>Formation Nitrox confirmé (4 plongées)</span><strong>310 euros</strong></li>
+  <li><span>Formation N2, N3, préparation monitorat, etc.</span><strong>Sur devis</strong></li>
+  <li><span>Sortie cétacés</span><strong>Sur devis</strong></li>
+  <li><span>Initiation apnée</span><strong>Sur devis</strong></li>
+  <li><span>Supplément plongée de nuit</span><strong>15 euros</strong></li>
+  <li><span>Supplément Nitrox</span><strong>10 euros</strong></li>
+</ul>
   <button className={styles.otherBtn} onClick={() => router.push("/plongee")}>Voir toutes les formules</button>
 </section>
 
@@ -268,9 +268,9 @@ useEffect(() => {
     <div><img src="/image/raie.jpg" onClick={() => router.push("/wikipage")}/><p>poisson 4</p></div>
   </div>
 </section>
-
+<h2 className={styles.titleContact}>Contact</h2>
 <section className={styles.contact}>
-  <h2>Contact</h2>
+  
   <p className={styles.location} onClick={() =>
     window.open(
       "https://www.google.com/maps/dir/?api=1&destination=Escapade+Plong%C3%A9e,+2+Rue+du+Port,+Saint-Gilles+les+Bains,+La+R%C3%A9union",
@@ -278,19 +278,22 @@ useEffect(() => {
     )
   }
 > {position} Club Escapade Plongée - Saint-Gilles-les-Bains</p>
+<br></br>
 <p className={styles.location} onClick={() =>
     window.open(
-      "https://www.instagram.com/hug_o_diving/"
+      "https://www.instagram.com/hug_o2_diving/"
     )
-  }>{instagram}hug_o diving</p>
+  }>{instagram}hug_o2_diving</p>
+  <br></br>
+  <p>hugodiving974@gmail.com</p>
   <div className={styles.socials}>
-    <a>Me contacter</a>
+   
     
   </div>
 </section>
 <div className={styles.footer}>
       <p>№ SIRET: 92148663500029</p>
-      <p>hugodiving974@gmail.com</p>
+      
 
     </div>
     </div>

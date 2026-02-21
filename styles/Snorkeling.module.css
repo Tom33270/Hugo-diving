@@ -81,7 +81,7 @@
 .tips h2,
 .infos h2 {
   font-size: 40px;
-  color: white;
+  color: rgb(65, 63, 63);
   margin-bottom: 20px;
 }
 
@@ -217,10 +217,11 @@
   max-width: 700px;
   margin: 20px auto;
   text-align: left;
+  
 }
 
 .ideal ul li {
-  color: white;
+  color:rgb(87, 85, 85);
   font-size: 18px;
   line-height: 2;
   padding-left: 25px;

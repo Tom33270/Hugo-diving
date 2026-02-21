@@ -80,7 +80,7 @@
 .conservation h2,
 .infos h2 {
   font-size: 40px;
-  color: white;
+  color:rgb(65, 63, 63);
   margin-bottom: 20px;
 }
 
@@ -90,13 +90,31 @@
   line-height: 1.6;
   max-width: 800px;
   margin: auto;
-  color: rgb(240, 240, 240);
+  color:rgb(65, 63, 63);
+}
+.experience h2{
+  color:rgb(65, 63, 63);
+}
+.experience p{
+  color:rgb(65, 63, 63);
 }
 
 /* Seasons section */
 .seasons {
   margin-bottom: 60px;
   text-align: center;
+}
+.season{
+  color:rgb(65, 63, 63);
+}
+.important{
+  color:rgb(65, 63, 63);
+}
+.activity h2{
+  color:rgb(65, 63, 63);
+}
+.step h3, .step p {
+  color:rgb(65, 63, 63);
 }
 
 .seasonsGrid {
@@ -133,7 +151,7 @@
 }
 
 .seasonCard p {
-  color: rgb(87, 85, 85);
+  color:rgb(87, 85, 85);
   font-size: 16px;
   line-height: 1.6;
 }
@@ -160,7 +178,7 @@
 }
 
 .speciesGrid h3 {
-  color: rgb(36, 35, 35);
+    
   font-size: 22px;
   margin-bottom: 10px;
 }
@@ -214,10 +232,11 @@
   padding: 25px;
   border-radius: 10px;
   margin-top: 20px;
+  color:rgb(65, 63, 63);
 }
 
 .charter h3 {
-  color: rgb(36, 35, 35);
+  color:rgb(65, 63, 63);
   font-size: 22px;
   margin-bottom: 15px;
 }

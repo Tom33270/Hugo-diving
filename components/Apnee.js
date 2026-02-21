@@ -26,8 +26,7 @@ function Apnee(){
             <h2>Moniteur Apnée Certifié PFI</h2>
             <p>
                 En tant que moniteur apnée PFI (Performance Freediving International), je vous accompagne
-                dans la découverte et le perfectionnement de cette discipline fascinante. Avec plus de
-                20 ans d'expérience dans l'enseignement, je vous transmets les techniques et la philosophie
+                dans la découverte et le perfectionnement de cette discipline fascinante. De part mon expérience dans l'enseignement, je vous transmets les techniques et la philosophie
                 de l'apnée en toute sécurité.
             </p>
         </div>
@@ -114,7 +113,7 @@ function Apnee(){
         <div className={styles.cta}>
             <h2>Prêt à Découvrir l'Apnée ?</h2>
             <p>Contactez-moi pour planifier votre initiation</p>
-            <button onClick={() => router.push("/")}>Me Contacter</button>
+            <button onClick={() => router.push("/contact")}>Me Contacter</button>
         </div>
     </section>
 </div>

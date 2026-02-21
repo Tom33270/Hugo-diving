@@ -66,7 +66,7 @@ function Snorkeling(){
                     <li><strong>Cap L'Houssaye </strong>: plongée au cœur d’un relief volcanique spectaculaire, entre arches, failles et poissons tropicaux.</li>
                     <li><strong>Canyon</strong> :  exploration d’un véritable labyrinthe naturel, avec descentes entre les parois rocheuses et bancs de poissons colorés.</li>
                     <li><strong>Pain De Sucre </strong> : un jardin corallien lumineux, idéal pour observer une grande diversité de poissons et de coraux.</li>
-                    <li><strong>Boucan Canot </strong>: observations de tortues garanties (en saison)</li>
+                    <li><strong>Boucan Canot </strong>: observations de tortues.</li>
                 </ul>
             </div>
         </div>
@@ -157,7 +157,7 @@ function Snorkeling(){
         <div className={styles.cta}>
             <h2>Prêt pour l'Aventure ?</h2>
             <p>Réservez votre randonnée palmée dès maintenant</p>
-            <button onClick={() => router.push("/")}>Me Contacter</button>
+            <button onClick={() => router.push("/contact")}>Me Contacter</button>
         </div>
     </section>
 </div>

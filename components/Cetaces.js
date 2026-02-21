@@ -174,7 +174,7 @@ function Cetaces(){
                 </div>
                 <div>
                     <h3>Tarif</h3>
-                    <p>85€/personne - Réduction famille disponible</p>
+                    <p>110€/personne - Réduction famille disponible</p>
                 </div>
             </div>
         </div>
@@ -182,7 +182,7 @@ function Cetaces(){
         <div className={styles.cta}>
             <h2>Prêt pour cette Expérience Unique ?</h2>
             <p>Réservez votre sortie d'observation des cétacés</p>
-            <button onClick={() => router.push("/")}>Me Contacter</button>
+            <button onClick={() => router.push("/contact")}>Me Contacter</button>
         </div>
     </section>
 </div>
