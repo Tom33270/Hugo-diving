@@ -625,6 +625,7 @@ font-size: 40px;
     font-size: 16px;
   }
   
+  
   .buttonsRight {
     width: auto;
     gap: 10px;
@@ -693,15 +694,28 @@ font-size: 40px;
     font-size: 40px;
   }
   
-  .modalContent {
-  display: flex;
-  flex-wrap: wrap;         /* Permet le retour à la ligne */
-  justify-content: center; /* Centrage horizontal */
-  gap: 15px;
-  margin-bottom: 20px;
-  padding: 20px;
-  cursor: pointer;
-}
+ .modalContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .plongee,
+  .snorkeling,
+  .cetaces,
+  .apnee,
+  .btnPosition,
+  .btnPhotos,
+  .btnContact,
+  .btnLoggin {
+    width: 110px;
+    height:80px;
+    font-size: 20px;
+    border-radius: 25px;
+    margin:0
+  }
+  .customModal{
+    font-size: 22px;
+  }
+
 
 .modalContent > div {
   flex: 0 1 calc(50% - 15px); /* Deux éléments par ligne avec l'écart */
@@ -841,3 +855,50 @@ font-size: 40px;
     width: auto;
   }
 }
+
+@media (max-width: 600px) {
+  .plongee,
+  .snorkeling,
+  .cetaces,
+  .apnee,
+  .btnPosition,
+  .btnPhotos,
+  .btnContact,
+  .btnLoggin {
+    width: 110px;
+    height:80px;
+    font-size: 20px;
+    border-radius: 25px;
+    margin:0
+  }
+  .customModal{
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .plongee,
+  .snorkeling,
+  .cetaces,
+  .apnee,
+  .btnPosition,
+  .btnPhotos,
+  .btnContact,
+  .btnLoggin {
+    width: 300px;
+    height:210px;
+    font-size: 30px;
+    border-radius: 25px;
+    margin:5px
+  
+  }
+  .modalContent{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+  
+  .customModal{
+    font-size: 45px;
+  }
+}
+
