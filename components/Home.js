@@ -132,6 +132,21 @@ useEffect(() => {
       <div className={styles.snorkeling} onClick={() => router.push("/snorkeling")}>Snorkeling</div>
       <div className={styles.cetaces } onClick={() => router.push("/cetaces")}>Sortie cétacés</div>
       <div className={styles.apnee} onClick={() => router.push("/apnee")}>Apnée</div>
+      <p className={`${styles.cardButton} ${styles.btnPosition}`} onClick={() => setOpenMap(true)}>
+  {position} Maps
+</p>
+
+<p className={`${styles.cardButton} ${styles.btnPhotos}`} onClick={() => router.push("/gallery")}>
+  {photos} Galerie
+</p>
+
+<p className={`${styles.cardButton} ${styles.btnPhotos}`} onClick={() => router.push("/wikipage")}>
+  {wiki} WikiFish
+</p>
+
+<p className={`${styles.cardButton} ${styles.btnContact}`} onClick={() => router.push("/contact")}>
+  {contact} Contact
+</p>
     </div>
   );
 
@@ -140,9 +155,12 @@ useEffect(() => {
       <header className={styles.header}>
         <div className={styles.tete}>
           <div className={styles.btntete}>
+           <div className={styles.menuWrapper}>
             <p className={styles.menu} onClick={() => setOpen(true)}>
-              {menu}Menu
+              {menu}
             </p>
+            <p className={styles.menuLabel}>Menu</p>
+          </div>
 
           
             <Modal
@@ -164,13 +182,7 @@ useEffect(() => {
            
 
            
-              <p className={styles.btnPosition} onClick={() => setOpenMap(true)}>
-                {position} Maps
-              </p>
-              <p className={styles.btnPhotos}onClick={()=> router.push("/gallery")}>{photos} Galerie</p>
-              <p className={styles.btnPhotos}onClick={()=> router.push("/wikipage")}>{wiki} WikiFish</p>
-              <p className={styles.btnTarifs} onClick={() => tarifsRef.current?.scrollIntoView({ behavior: 'smooth' })}>{tarifs} Tarifs</p>
-              <p className={styles.btnContact} onClick={() => router.push("/contact")}>{contact} Contact</p>
+              
            
           </div>
         </div>
