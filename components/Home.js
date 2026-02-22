@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faCreditCard, faLocationDot, faMailBulk, faPhotoFilm } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faBars, faCreditCard, faFish, faLocationDot, faMailBulk, faPhotoFilm } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faWikipediaW } from '@fortawesome/free-brands-svg-icons';
 import { Button } from 'antd';
 import { useState, useEffect, useRef } from 'react';
 import Modal from 'react-modal';
@@ -27,8 +27,23 @@ function Home() {
   const tarifs = <FontAwesomeIcon icon={faCreditCard} />;
   const contact = <FontAwesomeIcon icon={faMailBulk} />;
   const instagram = <FontAwesomeIcon icon={faInstagram} />;
+   const wiki = <FontAwesomeIcon icon={faFish} />;
 const [Images, setImages] = useState([]);
 const [randomImages, setRandomImages] = useState([]);
+
+ const [randomSpecies, setRandomSpecies] = useState([]);
+
+  useEffect(() => {
+    fetch("/data/poissons-reunion.json")
+      .then((res) => res.json())
+      .then((data) => {
+        // Mélange le tableau
+        const shuffled = data.sort(() => 0.5 - Math.random());
+        // Garde 4 espèces
+        setRandomSpecies(shuffled.slice(0, 4));
+      });
+  }, []);
+
 
 useEffect(() => {
   fetch('/api/photos')
@@ -153,6 +168,7 @@ useEffect(() => {
                 {position} Maps
               </p>
               <p className={styles.btnPhotos}onClick={()=> router.push("/gallery")}>{photos} Galerie</p>
+              <p className={styles.btnPhotos}onClick={()=> router.push("/wikipage")}>{wiki} WikiFish</p>
               <p className={styles.btnTarifs} onClick={() => tarifsRef.current?.scrollIntoView({ behavior: 'smooth' })}>{tarifs} Tarifs</p>
               <p className={styles.btnContact} onClick={() => router.push("/contact")}>{contact} Contact</p>
            
@@ -258,16 +274,24 @@ useEffect(() => {
 </ul>
   <button className={styles.otherBtn} onClick={() => router.push("/plongee")}>Voir toutes les formules</button>
 </section>
-{/* 
+
 <section className={styles.species}>
   <h2>Rencontrez les espèces</h2>
   <div className={styles.speciesGrid}>
-    <div><img src="/image/dauphin.jpg" onClick={() => router.push("/wikipage")}/><p>poisson 1</p></div>
-    <div><img src="/image/baleine.jpg"onClick={() => router.push("/wikipage")} /><p>poisson 2</p></div>
-    <div><img src="/image/tortue.jpg" onClick={() => router.push("/wikipage")}/><p>poisson 3</p></div>
-    <div><img src="/image/raie.jpg" onClick={() => router.push("/wikipage")}/><p>poisson 4</p></div>
-  </div>
-</section> */}
+  {randomSpecies.map((sp) => (
+    <div key={sp.id}>
+      <img
+        src={sp.image}
+        alt={sp.nom_commun}
+        onClick={() => router.push(`/wikipage?id=${sp.id}`)}
+      />
+      <p>{sp.nom_commun}</p>
+    </div>
+  ))}
+</div>
+  
+</section>
+<button className={styles.otherBtn} onClick={() => router.push("/wikipage")}>Wikipage</button>
   <h2 className={styles.titleContact}>Contact</h2>
 <section className={styles.contact}>
   

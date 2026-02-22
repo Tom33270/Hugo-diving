@@ -484,6 +484,7 @@ font-weight: 450;
   gap: 25px;
   max-width: 1000px;
   margin: auto;
+  cursor: pointer;
 }
 
 .speciesGrid img {
