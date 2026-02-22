@@ -856,7 +856,7 @@ font-size: 40px;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .plongee,
   .snorkeling,
   .cetaces,
@@ -876,29 +876,5 @@ font-size: 40px;
   }
 }
 
-@media (max-width: 1200px) {
-  .plongee,
-  .snorkeling,
-  .cetaces,
-  .apnee,
-  .btnPosition,
-  .btnPhotos,
-  .btnContact,
-  .btnLoggin {
-    width: 300px;
-    height:210px;
-    font-size: 30px;
-    border-radius: 25px;
-    margin:5px
-  
-  }
-  .modalContent{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-  
-  .customModal{
-    font-size: 45px;
-  }
-}
+
 
