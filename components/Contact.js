@@ -25,11 +25,14 @@ export default function Contact() {
 
   return (
     <div className={styles.global}>
+      <section className={styles.header}>
+         <h1 className={styles.title}>Contact</h1>
+    </section>
       <section className={styles.main}>
-        <h1 className={styles.title}>Contact</h1>
+       
 
         {sent && <p className={styles.success}>Message envoyé !</p>}
-
+      <div className={styles.formWrapper}>
         <form onSubmit={handleSubmit} className={styles.form}>
           <input
             type="text"
@@ -61,8 +64,11 @@ export default function Contact() {
           />
 
           <button type="submit">Envoyer</button>
-          <button className={styles.btnHome} onClick={() => router.push("/")}>Retour à l'accueil</button>
+         
         </form>
+        
+        </div>
+        <div> <button className={styles.btnHome} onClick={() => router.push("/")}>Retour à l'accueil</button></div>
         <div className={styles.footer}>
       <p>№ SIRET: 92148663500029</p>
       

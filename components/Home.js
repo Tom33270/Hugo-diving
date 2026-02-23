@@ -206,6 +206,7 @@ useEffect(() => {
         </div>
 
          <div className={styles.mainTitle}>
+           {/* <img className={styles.portrait} src="/image/photoProfil.jpeg" alt="Photo de profil"  /> */}
               <h1>Hug'O₂ Diving</h1>
               <p>Saint-Gilles-les-Bains, La Réunion</p>
             </div>
@@ -229,15 +230,23 @@ useEffect(() => {
     <div main className={styles.main}>
      <section className={styles.about}>
   {/* <img src="/image/hugo.jpg"  className={styles.portrait} /> */}
-  <div className={styles.presentation}>
+ <div className={styles.presentation}>
+  {/* <div className={styles.photoWrapper}>
+    <img className={styles.portrait} src="/image/photoProfil.jpeg" alt="Photo de profil" />
+  </div> */}
+
+  <div className={styles.textContent}>
     <h2>Me, Myself and I</h2>
     <p>
-      Dans l’enseignement depuis plus de 20 ans, comme professeur de tennis dans un premier temps, Mon parcours m’a mené de la Réunion à la Thaïlande, en passant par Banyuls-sur-Mer, pour vivre et enseigner ma passion de la plongée. Depuis 2017, je suis présent sur cette île magnifique et toujours avec la même envie de faire découvrir cette face peu connue qui grouille de vie ! 
+       Dans l’enseignement depuis plus de 20 ans, comme professeur de tennis dans un premier temps, Mon parcours m’a mené de la Réunion à la Thaïlande, en passant par Banyuls-sur-Mer, pour vivre et enseigner ma passion de la plongée. Depuis 2017, je suis présent sur cette île magnifique et toujours avec la même envie de faire découvrir cette face peu connue qui grouille de vie ! 
       Moniteur de plongée sous-marine professionnel,  je travaille en tant qu’indépendant sur le  Port de Saint-Gilles les Bains. 
-      Ce que j’aime le plus dans la plongée : Être dans l’instant présent, totalement connecté à l’environnement sous-marin, et me laisser surprendre par ses merveilles ! 
+      Ce que j’aime le plus dans la plongée : Être dans l’instant présent, totalement connecté à l’environnement sous-marin, et me laisser surprendre par ses merveilles !
     </p>
-    <button className={styles.moreBtn} onClick={() => router.push("/contact")}>Allez viens, on est bien ! </button>
+    <button className={styles.moreBtn} onClick={() => router.push("/contact")}>
+      Allez viens, on est bien !
+    </button>
   </div>
+</div>
 </section>
 
 <section className={styles.why}>
