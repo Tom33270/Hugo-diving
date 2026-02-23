@@ -1,11 +1,12 @@
 import styles from '../styles/Home.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faCreditCard, faFish, faLocationDot, faMailBulk, faPhotoFilm } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram, faWikipediaW } from '@fortawesome/free-brands-svg-icons';
+import { faBars, faCreditCard, faFish, faLocationDot, faMailBulk, faPhotoFilm, faWater} from '@fortawesome/free-solid-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { Button } from 'antd';
 import { useState, useEffect, useRef } from 'react';
 import Modal from 'react-modal';
 import { useRouter } from "next/router";
+
 
 
 import 'leaflet/dist/leaflet.css';
@@ -21,17 +22,31 @@ function Home() {
   const mapRef = useRef(null);
   const tarifsRef = useRef(null);
 
-  const menu = <FontAwesomeIcon icon={faBars} />;
+  const menu = <FontAwesomeIcon icon={faWater} />;
   const position = <FontAwesomeIcon icon={faLocationDot} />;
   const photos = <FontAwesomeIcon icon={faPhotoFilm} />;
   const tarifs = <FontAwesomeIcon icon={faCreditCard} />;
   const contact = <FontAwesomeIcon icon={faMailBulk} />;
   const instagram = <FontAwesomeIcon icon={faInstagram} />;
    const wiki = <FontAwesomeIcon icon={faFish} />;
+   
 const [Images, setImages] = useState([]);
 const [randomImages, setRandomImages] = useState([]);
 
  const [randomSpecies, setRandomSpecies] = useState([]);
+
+ const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
 
   useEffect(() => {
     fetch("/data/poissons-reunion.json")
@@ -94,12 +109,15 @@ useEffect(() => {
 
     const saintGilles = [-21.05574853081549, 55.22350096660605];
 
+
     const baleineIcon = L.icon({
       iconUrl: '/image/baleine.png',
       iconSize: [50, 50],
       iconAnchor: [25, 25],
       popupAnchor: [0, -25],
     });
+
+    
 
     mapRef.current = L.map('mapModal', {
       zoomControl: true,
@@ -136,17 +154,7 @@ useEffect(() => {
   {position} Maps
 </p>
 
-<p className={`${styles.cardButton} ${styles.btnPhotos}`} onClick={() => router.push("/gallery")}>
-  {photos} Galerie
-</p>
 
-<p className={`${styles.cardButton} ${styles.btnPhotos}`} onClick={() => router.push("/wikipage")}>
-  {wiki} WikiFish
-</p>
-
-<p className={`${styles.cardButton} ${styles.btnContact}`} onClick={() => router.push("/contact")}>
-  {contact} Contact
-</p>
     </div>
   );
 
@@ -154,13 +162,23 @@ useEffect(() => {
     <div>
       <header className={styles.header}>
         <div className={styles.tete}>
-          <div className={styles.btntete}>
-           <div className={styles.menuWrapper}>
-            <p className={styles.menu} onClick={() => setOpen(true)}>
-              {menu}
-            </p>
-            <p className={styles.menuLabel}>Menu</p>
-          </div>
+          <div className={ `${styles.btntete} ${scrolled ? styles.scrolled : ""}`}>
+           
+            <p className={ `${styles.menu} ${scrolled ? styles.scrolled : ""}`} onClick={() => setOpen(true)}>
+              {menu} Activitées</p>
+            <p className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`} onClick={() => router.push("/gallery")}>
+  {photos} Galerie
+</p>
+
+<p className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`} onClick={() => router.push("/wikipage")}>
+  {wiki} WikiFish
+</p>
+
+<p className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`} onClick={() => router.push("/contact")}>
+  {contact} Contact
+</p>
+            
+          
 
           
             <Modal
