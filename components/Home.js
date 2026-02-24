@@ -292,11 +292,11 @@ useEffect(() => {
 
 <section className={styles.prices} ref={tarifsRef}>
   <h2>Tarifs</h2>
-<ul class="prices">
+<ul className="prices">
   <li><span>Randonnée Palmée (4 personnes mini / 1h)</span><strong>55 euros</strong></li>
   <li><span>Baptême (environ 25min)</span><strong>85 euros</strong></li>
   <li><span>Initiation (45min à 1h)</span><strong>110 euros</strong></li>
-  <li><span>Pack découverte : un Baptême + une Initiation (12m max)</span><strong>180 euros</strong></li>
+  <li><span>Pack découverte : Baptême + Initiation (12m max)</span><strong>180 euros</strong></li>
   <li><span>Exploration (à partir du pe12)</span><strong>65 euros</strong></li>
   <li><span>Réadaptation (+ 1 an sans plonger)</span><strong>80 euros</strong></li>
   <li><span>Pack 3 plongées</span><strong>185 euros</strong></li>
