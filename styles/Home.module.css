@@ -105,32 +105,34 @@
 }
 
 /* Effet hover global */
-.menu:hover {
-  transform: translateY(-4px);
-  background: transparent;
-  font-size: 22px;
-  transition: 0.3s ease;
-}
-
-
 .menu {
+  all: unset;
   width: 80px;
   cursor: pointer;
   background: transparent;
   color: rgb(65, 63, 63);
   font-size: 16px;
-  gap:8px;
+  gap: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
- 
-  margin:0;
-   transition: background 0.3s ease, transform 0.3s ease;
-   
+  margin: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu:hover {
+  transform: translateY(-4px) scale(1.08); /* effet visuel similaire au font-size */
+  opacity: 0.9;
+  border-bottom: 1px solid rgb(65, 63, 63);
 }
 .menu.scrolled{
+
    background: transparent;
   color: white;
+}
+
+.menu.scrolled:hover{
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .menuLabel {
@@ -547,7 +549,7 @@ font-weight: 450;
   height: 200px;
   object-fit: cover;
   border-radius: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease;  
 }
 
 .galleryGrid img:hover {
