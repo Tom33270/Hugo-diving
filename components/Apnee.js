@@ -1,10 +1,21 @@
 import styles from '../styles/Apnee.module.css';
 import { useRouter } from "next/router";
 import Head from "next/head";
+import { useState, useEffect, useRef } from 'react';
 
 
 function Apnee(){
      const router = useRouter();
+        const [showScrollTop, setShowScrollTop] = useState(false);
+      
+        useEffect(() => {
+          const handleScroll = () => {
+            setShowScrollTop(window.scrollY > 300);
+          };
+      
+          window.addEventListener("scroll", handleScroll);
+          return () => window.removeEventListener("scroll", handleScroll);
+        }, []);
 
 
     return (
@@ -133,12 +144,16 @@ function Apnee(){
             <br></br>
             <button onClick={() => router.push("/contact")}>Me Contacter</button>
         </div>
-        <div className={styles.footer}>
-      <p>№ SIRET: 92148663500029</p>
-      
 
-    </div>
     </section>
+     {showScrollTop && (
+                  <button
+                    className={styles.scrollTop}
+                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  >
+                    ↑
+                  </button>
+                )}
 </div>
 </>
 

@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
 import Head from 'next/head';
+import { useState, useEffect, useRef } from 'react';
 
 
 
@@ -10,6 +11,16 @@ import Head from 'next/head';
 
 function Plongee(){
      const router = useRouter();
+        const [showScrollTop, setShowScrollTop] = useState(false);
+      
+        useEffect(() => {
+          const handleScroll = () => {
+            setShowScrollTop(window.scrollY > 300);
+          };
+      
+          window.addEventListener("scroll", handleScroll);
+          return () => window.removeEventListener("scroll", handleScroll);
+        }, []);
 
      const warning = <FontAwesomeIcon icon={faExclamationTriangle} />;
 
@@ -171,7 +182,16 @@ function Plongee(){
         </div>
     </section>
 </div>
+ {showScrollTop && (
+              <button
+                className={styles.scrollTop}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                ↑
+              </button>
+            )}
 </div>
+
 </>
 
     )

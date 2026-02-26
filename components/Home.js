@@ -38,6 +38,19 @@ const [randomImages, setRandomImages] = useState([]);
 
  const [scrolled, setScrolled] = useState(false);
 
+   const [showScrollTop, setShowScrollTop] = useState(false);
+ 
+   useEffect(() => {
+     const handleScroll = () => {
+       setShowScrollTop(window.scrollY > 300);
+     };
+ 
+     window.addEventListener("scroll", handleScroll);
+     return () => window.removeEventListener("scroll", handleScroll);
+   }, []);
+
+
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -353,6 +366,14 @@ return (
       <button className={styles.otherBtn} onClick={() => navigate("/wikipage")}>
         Wikipage
       </button>
+        {showScrollTop && (
+              <button
+                className={styles.scrollTop}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                ↑
+              </button>
+            )}
     </div>
   </>
 );
