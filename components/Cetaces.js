@@ -1,5 +1,8 @@
 import styles from '../styles/Cetaces.module.css';
 import { useRouter } from "next/router";
+import Head from "next/head";
+
+
 
 function Cetaces(){
      const router = useRouter();
@@ -7,6 +10,14 @@ function Cetaces(){
 
     return (
 <div className={styles.global}>
+    
+
+<Head>
+  <title>Sortie Cétacés La Réunion – Dauphins & Baleines à Saint‑Gilles  Hug’O₂ Diving
+</title>
+  <meta name="description" content="Rencontrez dauphins, baleines et autres cétacés à La Réunion. Sorties encadrées dans le respect de la charte d’approche. Expérience unique au large de Saint‑Gilles." />
+  <link rel="canonical" href="https://hugodiving.com/cetaces" />
+</Head>
     <section className={styles.header}>
          <h1 className={styles.title}>Observation des Cétacés</h1>
          <button onClick={() => router.push("/")}>Retour à l'accueil</button>

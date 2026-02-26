@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Wikipage.module.css";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function WikiPage() {
   const router = useRouter();
@@ -82,13 +83,32 @@ export default function WikiPage() {
 
     setFilteredList(result);
   }, [searchName, habitat, profondeur, frequence, speciesList, id]);
-
-  // 👉 MODE FICHE INDIVIDUELLE
+  
+// 👉 MODE FICHE INDIVIDUELLE
 if (id && selectedSpecies) {
   return (
     <div className={styles.pageBackground}>
-      <div className={styles.detailWrapper}>
 
+      <Head>
+        <title>{selectedSpecies.nom_commun} – Poisson de La Réunion | Fiche & Photo</title>
+
+        <meta
+          name="description"
+          content={`Informations sur ${selectedSpecies.nom_commun} : habitat, comportement, alimentation et observation à La Réunion. Photo et fiche complète.`}
+        />
+
+        <link
+          rel="canonical"
+          href={`https://hugodiving.com/wikipage?id=${selectedSpecies.id}`}
+        />
+
+        <meta property="og:title" content={`${selectedSpecies.nom_commun} – Poisson de La Réunion`} />
+        <meta property="og:description" content={`Fiche complète sur ${selectedSpecies.nom_commun}.`} />
+        <meta property="og:image" content={selectedSpecies.image} />
+        <meta property="og:type" content="article" />
+      </Head>
+
+      <div className={styles.detailWrapper}>
         <h1 className={styles.detailTitle}>{selectedSpecies.nom_commun}</h1>
 
         <button
@@ -116,7 +136,6 @@ if (id && selectedSpecies) {
             <p><strong>Fréquence :</strong> {selectedSpecies.frequence}</p>
           </div>
         </div>
-
       </div>
     </div>
   );
@@ -125,6 +144,14 @@ if (id && selectedSpecies) {
   // 👉 MODE LISTE COMPLÈTE
   return (
     <div className={styles.pageBackground}>
+      
+
+<Head>
+  <title>Poissons de La Réunion – Fiches Espèces & Photos  Hug’O₂ Diving
+</title>
+  <meta name="description" content="Explorez les espèces marines de La Réunion : poissons tropicaux, tortues, raies, cétacés. Fiches complètes avec photos et informations utiles." />
+  <link rel="canonical" href="https://hugodiving.com/wikipage" />
+</Head>
       <div className={styles.main}>
         <h1>WikiFish</h1>
 

@@ -1,6 +1,8 @@
 import styles from '../styles/Gallery.module.css';
 import { useRouter } from "next/router";
 import { useState, useEffect } from 'react';
+import Head from "next/head";
+
 
 function Gallery() {
   const router = useRouter();
@@ -14,6 +16,14 @@ function Gallery() {
 
   return (
     <div className={styles.global}>
+
+
+<Head>
+  <title>Galerie Photos – Plongée & Snorkeling à La Réunion  Hug’O₂ Diving
+</title>
+  <meta name="description" content="Découvrez les plus belles photos sous‑marines de La Réunion : raies manta, tortues, poissons tropicaux, cétacés et paysages marins." />
+  <link rel="canonical" href="https://hugodiving.com/gallery" />
+</Head>
       
       <section className={styles.header}>
         <h1 className={styles.title}>Moments sous L'eau</h1>

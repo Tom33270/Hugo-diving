@@ -1,5 +1,8 @@
 import styles from '../styles/Snorkeling.module.css';
 import { useRouter } from "next/router";
+import Head from "next/head";
+
+
 
 function Snorkeling(){
      const router = useRouter();
@@ -7,6 +10,13 @@ function Snorkeling(){
 
     return (
 <div className={styles.global}>
+
+<Head>
+  <title>Snorkeling à La Réunion – Randonnée Palmée à Saint‑Gilles  Hug’O₂ Diving
+</title>
+  <meta name="description" content="Sorties snorkeling encadrées à Saint‑Gilles-les-Bains. Découvrez poissons tropicaux, tortues et récifs en toute sécurité. Idéal familles et débutants." />
+  <link rel="canonical" href="https://hugodiving.com/snorkeling" />
+</Head>
     <section className={styles.header}>
          <h1 className={styles.title}>Randonnée Palmée</h1>
          <button onClick={() => router.push("/")}>Retour à l'accueil</button>

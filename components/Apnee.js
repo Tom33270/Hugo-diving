@@ -1,5 +1,7 @@
 import styles from '../styles/Apnee.module.css';
 import { useRouter } from "next/router";
+import Head from "next/head";
+
 
 function Apnee(){
      const router = useRouter();
@@ -7,6 +9,14 @@ function Apnee(){
 
     return (
 <div className={styles.global}>
+
+
+<Head>
+  <title>Apnée La Réunion – Initiation & Perfectionnement à Saint‑Gilles  Hug’O₂ Diving
+</title>
+  <meta name="description" content="Cours d’apnée pour débutants et confirmés à Saint‑Gilles-les-Bains. Respiration, relaxation, immersion libre. Encadrement professionnel et sécurisé." />
+  <link rel="canonical" href="https://hugodiving.com/apnee" />
+</Head>
     <section className={styles.header}>
          <h1 className={styles.title}>Apnée</h1>
          <button onClick={() => router.push("/")}>Retour à l'accueil</button>

@@ -5,6 +5,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { Button } from 'antd';
 import { useState, useEffect, useRef } from 'react';
 import Modal from 'react-modal';
+import Head from "next/head";
 import { useRouter } from "next/router";
 
 
@@ -143,226 +144,254 @@ useEffect(() => {
 
   initMap();
 }, [openMap]);
+const navigate = (path) => router.push(path);
 
-  const modalContent = (
-    <div className={styles.modalContent}>
-      <div className={styles.plongee} onClick={() => router.push("/plongee")}>Plongée</div>
-      <div className={styles.snorkeling} onClick={() => router.push("/snorkeling")}>Snorkeling</div>
-      <div className={styles.cetaces } onClick={() => router.push("/cetaces")}>Sortie cétacés</div>
-      <div className={styles.apnee} onClick={() => router.push("/apnee")}>Apnée</div>
-      <p className={`${styles.cardButton} ${styles.btnPosition}`} onClick={() => setOpenMap(true)}>
-  {position} Maps
-</p>
+const modalContent = (
+  <div className={styles.modalContent}>
+    <button className={styles.plongee} onClick={() => navigate("/plongee")}>Plongée</button>
+    <button className={styles.snorkeling} onClick={() => navigate("/snorkeling")}>Snorkeling</button>
+    <button className={styles.cetaces} onClick={() => navigate("/cetaces")}>Sortie cétacés</button>
+    <button className={styles.apnee} onClick={() => navigate("/apnee")}>Apnée</button>
 
-
-    </div>
-  );
-
-  return (
-    <div>
-      <header className={styles.header}>
-        <div className={styles.tete}>
-          <div className={ `${styles.btntete} ${scrolled ? styles.scrolled : ""}`}>
-           
-            <p className={ `${styles.menu} ${scrolled ? styles.scrolled : ""}`} onClick={() => setOpen(true)}>
-              {menu} Activitées</p>
-            <p className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`} onClick={() => router.push("/gallery")}>
-  {photos} Galerie
-</p>
-
-<p className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`} onClick={() => router.push("/wikipage")}>
-  {wiki} WikiFish
-</p>
-
-<p className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`} onClick={() => router.push("/contact")}>
-  {contact} Contact
-</p>
-            
-          
-
-          
-            <Modal
-              isOpen={open}
-              bodyOpenClassName="no-scroll"
-              onRequestClose={() => setOpen(false)}
-              shouldCloseOnOverlayClick={true}
-              className={styles.customModal}
-              overlayClassName={styles.customOverlay}
-              
-            >
-              <h2 className={styles.activities}>Les différentes activitées</h2>
-              {modalContent}
-              <button onClick={() => setOpen(false)} className={styles.closingButton}>
-                Fermer
-              </button>
-            </Modal>
-
-           
-
-           
-              
-           
-          </div>
-        </div>
-
-         <div className={styles.mainTitle}>
-           {/* <img className={styles.portrait} src="/image/photoProfil.jpeg" alt="Photo de profil"  /> */}
-              <h1>Hug'O₂ Diving</h1>
-              <p>Saint-Gilles-les-Bains, La Réunion</p>
-            </div>
-
-        
-      </header>
-    
-      <Modal
-        isOpen={openMap}
-        onRequestClose={() => setOpenMap(false)}
-        shouldCloseOnOverlayClick={true}
-        className={styles.customModal}
-        overlayClassName={styles.customOverlay}
-      >
-        <div id="mapModal" className={styles.mapContainer}></div>
-
-        <button onClick={() => setOpenMap(false)} className={styles.closingButton}>
-          Fermer
-        </button>
-      </Modal>
-    <div main className={styles.main}>
-     <section className={styles.about}>
-  {/* <img src="/image/hugo.jpg"  className={styles.portrait} /> */}
- <div className={styles.presentation}>
-  {/* <div className={styles.photoWrapper}>
-    <img className={styles.portrait} src="/image/photoProfil.jpeg" alt="Photo de profil" />
-  </div> */}
-
-  <div className={styles.textContent}>
-    <h2>Me, Myself and I</h2>
-    <p>
-       Dans l’enseignement depuis plus de 20 ans, comme professeur de tennis dans un premier temps, Mon parcours m’a mené de la Réunion à la Thaïlande, en passant par Banyuls-sur-Mer, pour vivre et enseigner ma passion de la plongée. Depuis 2017, je suis présent sur cette île magnifique et toujours avec la même envie de faire découvrir cette face peu connue qui grouille de vie ! 
-      Moniteur de plongée sous-marine professionnel,  je travaille en tant qu’indépendant sur le  Port de Saint-Gilles les Bains. 
-      Ce que j’aime le plus dans la plongée : Être dans l’instant présent, totalement connecté à l’environnement sous-marin, et me laisser surprendre par ses merveilles !
-    </p>
-    <button className={styles.moreBtn} onClick={() => router.push("/contact")}>
-      Allez viens, on est bien !
+    <button
+      className={`${styles.cardButton} ${styles.btnPosition}`}
+      onClick={() => setOpenMap(true)}
+    >
+      {position} Maps
     </button>
   </div>
-</div>
-</section>
+);
 
-<section className={styles.why}>
-  <h2>Pourquoi choisir Hug'O₂ Diving?</h2>
-  <div className={styles.whyGrid}>
-    <div>
-      <h3>Certifications multiples</h3>
-      <p>- Diplôme d'état E4,<br></br>- Moniteur fédéral 1er degré<br></br>PADI, SDI/TDI, FFESSM, ANMP<br></br>- Moniteur d'apnée PFI<br></br>- Formateur permis bateau</p>
-    </div>
-    <div>
-      <h3>Matériel Scubapro</h3>
-      <p>- Équipement de qualité,<br></br> régulièrement entretenu,<br></br>en excellent état.<br></br>
-      - Large choix.<br></br>- Locaux et bateaux<br></br> professionnels,<br></br>- douches et toilettes </p>
-    </div>
-    <div>
-      <h3>Expérience internationale</h3>
-      <p>-  + 4000  plongées dans le<br></br> monde entier<br></br>Enseigne en français et en anglais<br></br>20 années d'expériences dans l'enseignement à temps plein (je me fais vieux...)</p>
-    </div>
-    <div>
-      <h3>Approche personnalisée</h3>
-      <p>Petits groupes,<br>
-      </br> encadrement adapté à votre niveau</p>
-    </div>
-  </div>
-</section>
-
-<section className={styles.gallery}>
-  <h2 className={styles.underWater}>Moments sous l'eau</h2>
- <div className={styles.galleryGrid}>
- {randomImages.map((img, index) => (
-  <img
-    key={index}
-    src={img.secure_url}
-    alt=""
-    onClick={() => router.push("/gallery")}
-  />
-))}
-
-</div>
-
-  <button className={styles.otherBtn} onClick={() => router.push("/gallery")}>Voir la galerie</button>
-</section>
-
-<section className={styles.prices} ref={tarifsRef}>
-  <h2>Tarifs</h2>
-<ul className="prices">
-  <li><span>Randonnée Palmée (4 personnes mini / 1h)</span><strong>55 euros</strong></li>
-  <li><span>Baptême (environ 25min)</span><strong>85 euros</strong></li>
-  <li><span>Initiation (45min à 1h)</span><strong>110 euros</strong></li>
-  <li><span>Pack découverte : Baptême + Initiation (12m max)</span><strong>180 euros</strong></li>
-  <li><span>Exploration (à partir du pe12)</span><strong>65 euros</strong></li>
-  <li><span>Réadaptation (+ 1 an sans plonger)</span><strong>80 euros</strong></li>
-  <li><span>Pack 3 plongées</span><strong>185 euros</strong></li>
-  <li><span>Pack 6 plongées</span><strong>350 euros</strong></li>
-  <li><span>Pack 10 plongées</span><strong>550 euros</strong></li>
-  <li><span>Niveau 1 / Open water SDI (5 plongées)</span><strong>490 euros</strong></li>
-  <li><span>Formation Nitrox simple (2 plongées)</span><strong>180 euros</strong></li>
-  <li><span>Formation Nitrox confirmé (4 plongées)</span><strong>310 euros</strong></li>
-  <li><span>Formation N2, N3, préparation monitorat, etc.</span><strong>Sur devis</strong></li>
-  <li><span>Sortie cétacés</span><strong>Sur devis</strong></li>
-  <li><span>Initiation apnée</span><strong>Sur devis</strong></li>
-  <li><span>Supplément plongée de nuit</span><strong>15 euros</strong></li>
-  <li><span>Supplément Nitrox</span><strong>10 euros</strong></li>
-</ul>
-  <button className={styles.otherBtn} onClick={() => router.push("/plongee")}>Voir toutes les formules</button>
-</section>
-
-<section className={styles.species}>
-  <h2>Rencontrez les espèces</h2>
-  <div className={styles.speciesGrid}>
-  {randomSpecies.map((sp) => (
-    <div key={sp.id}>
-      <img
-        src={sp.image}
-        alt={sp.nom_commun}
-        onClick={() => router.push(`/wikipage?id=${sp.id}`)}
+return (
+  <div>
+    <Head>
+      <title>Plongée à Saint‑Gilles – Hug’O₂ Diving | Baptêmes, Explorations & Sorties Cétacés</title>
+      <meta
+        name="description"
+        content="Plongée sous‑marine à La Réunion avec un moniteur diplômé. Baptêmes, explorations, sorties cétacés et apnée à Saint‑Gilles-les-Bains."
       />
-      <p>{sp.nom_commun}</p>
-    </div>
-  ))}
-</div>
-  
-</section>
-<button className={styles.otherBtn} onClick={() => router.push("/wikipage")}>Wikipage</button>
-  <h2 className={styles.titleContact}>Contact</h2>
-<section className={styles.contact}>
-  
-  <p className={styles.location} onClick={() =>
-    window.open(
-      "https://www.google.com/maps/dir/?api=1&destination=Escapade+Plong%C3%A9e,+2+Rue+du+Port,+Saint-Gilles+les+Bains,+La+R%C3%A9union",
-      "_blank"
-    )
-  }
-> {position} Club Escapade Plongée - Saint-Gilles-les-Bains</p>
-<br></br>
-<p className={styles.location} onClick={() =>
-    window.open(
-      "https://www.instagram.com/hug_o2_diving/"
-    )
-  }>{instagram}hug_o2_diving</p>
-  <br></br>
-  <p>hugodiving974@gmail.com</p>
-  <div className={styles.socials}>
-   
-    
-  </div>
-</section>
-<div className={styles.footer}>
-      <p>№ SIRET: 92148663500029</p>
-      
+      <meta name="robots" content="index, follow" />
+      <meta property="og:title" content="Hug’O₂ Diving – Plongée à Saint‑Gilles" />
+      <meta property="og:description" content="Baptêmes, explorations, sorties cétacés et apnée à La Réunion." />
+      <meta property="og:image" content="/image/photoProfil.jpeg" />
+      <meta property="og:type" content="website" />
+      <link rel="canonical" href="https://hugodiving.com" />
+    </Head>
+    <header className={styles.header}>
+      <div className={styles.tete}>
+        <div className={`${styles.btntete} ${scrolled ? styles.scrolled : ""}`}>
 
+          <button
+            className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`}
+            onClick={() => setOpen(true)}
+          >
+            {menu} Activités
+          </button>
+
+          <button
+            className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`}
+            onClick={() => navigate("/gallery")}
+          >
+            {photos} Galerie
+          </button>
+
+          <button
+            className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`}
+            onClick={() => navigate("/wikipage")}
+          >
+            {wiki} WikiFish
+          </button>
+
+          <button
+            className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`}
+            onClick={() => navigate("/contact")}
+          >
+            {contact} Contact
+          </button>
+
+          <Modal
+            isOpen={open}
+            bodyOpenClassName="no-scroll"
+            onRequestClose={() => setOpen(false)}
+            shouldCloseOnOverlayClick
+            className={styles.customModal}
+            overlayClassName={styles.customOverlay}
+          >
+            <h2 className={styles.activities}>Les différentes activités</h2>
+            {modalContent}
+
+            <button onClick={() => setOpen(false)} className={styles.closingButton}>
+              Fermer
+            </button>
+          </Modal>
+        </div>
+      </div>
+
+      <div className={styles.mainTitle}>
+        <h1>Hug'O₂ Diving</h1>
+        <p>Saint-Gilles-les-Bains, La Réunion</p>
+      </div>
+    </header>
+
+    {/* MODAL MAP */}
+    <Modal
+      isOpen={openMap}
+      onRequestClose={() => setOpenMap(false)}
+      shouldCloseOnOverlayClick
+      className={styles.customModal}
+      overlayClassName={styles.customOverlay}
+    >
+      <div id="mapModal" className={styles.mapContainer}></div>
+
+      <button onClick={() => setOpenMap(false)} className={styles.closingButton}>
+        Fermer
+      </button>
+    </Modal>
+
+    {/* MAIN CONTENT */}
+    <div className={styles.main}>
+
+      {/* ABOUT */}
+      <section className={styles.about}>
+        <div className={styles.presentation}>
+          <div className={styles.textContent}>
+            <h2>Me, Myself and I</h2>
+            <p>
+              Dans l’enseignement depuis plus de 20 ans, comme professeur de tennis dans un premier temps...
+            </p>
+
+            <button className={styles.moreBtn} onClick={() => navigate("/contact")}>
+              Allez viens, on est bien !
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY */}
+      <section className={styles.why}>
+        <h2>Pourquoi choisir Hug'O₂ Diving?</h2>
+        <div className={styles.whyGrid}>
+          <div>
+            <h3>Certifications multiples</h3>
+            <p>- Diplôme d'état E4,<br />- Moniteur fédéral 1er degré<br />PADI, SDI/TDI...</p>
+          </div>
+
+          <div>
+            <h3>Matériel Scubapro</h3>
+            <p>- Équipement de qualité,<br />régulièrement entretenu...</p>
+          </div>
+
+          <div>
+            <h3>Expérience internationale</h3>
+            <p>- +4000 plongées dans le monde entier...</p>
+          </div>
+
+          <div>
+            <h3>Approche personnalisée</h3>
+            <p>Petits groupes,<br />encadrement adapté à votre niveau</p>
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section className={styles.gallery}>
+        <h2 className={styles.underWater}>Moments sous l'eau</h2>
+
+        <div className={styles.galleryGrid}>
+          {randomImages.map((img, index) => (
+            <img
+              key={index}
+              src={img.secure_url}
+              alt=""
+              onClick={() => navigate("/gallery")}
+            />
+          ))}
+        </div>
+
+        <button className={styles.otherBtn} onClick={() => navigate("/gallery")}>
+          Voir la galerie
+        </button>
+      </section>
+
+      {/* PRICES */}
+      <section className={styles.prices} ref={tarifsRef}>
+        <h2>Tarifs</h2>
+
+        <ul className="prices">
+          <li><span>Randonnée Palmée</span><strong>55 euros</strong></li>
+          <li><span>Baptême</span><strong>85 euros</strong></li>
+          <li><span>Initiation</span><strong>110 euros</strong></li>
+          <li><span>Pack découverte</span><strong>180 euros</strong></li>
+          <li><span>Exploration</span><strong>65 euros</strong></li>
+          <li><span>Réadaptation</span><strong>80 euros</strong></li>
+          <li><span>Pack 3 plongées</span><strong>185 euros</strong></li>
+          <li><span>Pack 6 plongées</span><strong>350 euros</strong></li>
+          <li><span>Pack 10 plongées</span><strong>550 euros</strong></li>
+          <li><span>Niveau 1 / Open water SDI</span><strong>490 euros</strong></li>
+          <li><span>Nitrox simple</span><strong>180 euros</strong></li>
+          <li><span>Nitrox confirmé</span><strong>310 euros</strong></li>
+          <li><span>Formations N2, N3...</span><strong>Sur devis</strong></li>
+        </ul>
+
+        <button className={styles.otherBtn} onClick={() => navigate("/plongee")}>
+          Voir toutes les formules
+        </button>
+      </section>
+
+      {/* SPECIES */}
+      <section className={styles.species}>
+        <h2>Rencontrez les espèces</h2>
+
+        <div className={styles.speciesGrid}>
+          {randomSpecies.map((sp) => (
+            <div key={sp.id}>
+              <img
+                src={sp.image}
+                alt={sp.nom_commun}
+                onClick={() => navigate(`/wikipage?id=${sp.id}`)}
+              />
+              <p>{sp.nom_commun}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <button className={styles.otherBtn} onClick={() => navigate("/wikipage")}>
+        Wikipage
+      </button>
+
+      {/* CONTACT */}
+      <h2 className={styles.titleContact}>Contact</h2>
+
+      <section className={styles.contact}>
+        <p
+          className={styles.location}
+          onClick={() =>
+            window.open(
+              "https://www.google.com/maps/dir/?api=1&destination=Escapade+Plongée,+2+Rue+du+Port,+Saint-Gilles+les+Bains,+La+Réunion",
+              "_blank"
+            )
+          }
+        >
+          {position} Club Escapade Plongée - Saint-Gilles-les-Bains
+        </p>
+
+        <p
+          className={styles.location}
+          onClick={() => window.open("https://www.instagram.com/hug_o2_diving/")}
+        >
+          {instagram}hug_o2_diving
+        </p>
+
+        <p>hugodiving974@gmail.com</p>
+      </section>
+
+      <footer className={styles.footer}>
+        <p>№ SIRET: 92148663500029</p>
+      </footer>
     </div>
-    </div>
-    
   </div>
-  );
+);
+
 }
-
 export default Home;
