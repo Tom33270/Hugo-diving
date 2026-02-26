@@ -19,7 +19,7 @@ export default function PolitiqueConfidentialite() {
         <br />
         Entreprise individuelle – SIRET : 921 486 635 00029  
         <br />
-        Email : contact@hugodiving.com  
+        Email : hugodiving974@gmail.com  
         <br />
         Adresse : Saint‑Gilles‑les‑Bains, La Réunion
       </p>
@@ -94,7 +94,7 @@ export default function PolitiqueConfidentialite() {
       </ul>
       <p>
         Pour exercer vos droits, contactez‑nous à :  
-        <strong>contact@hugodiving.com</strong>
+        <strong>hugodiving974@gmail.com</strong>
       </p>
 
       <h2>10. Cookies</h2>
@@ -116,7 +116,7 @@ export default function PolitiqueConfidentialite() {
       <p>
         Pour toute question concernant cette politique de confidentialité,
         écrivez‑nous à :  
-        <strong>contact@hugodiving.com</strong>
+        <strong>hugodiving974@gmail.com</strong>
       </p>
     </div>
   );

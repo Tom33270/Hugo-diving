@@ -13,7 +13,7 @@ export default function MentionsLegales() {
       <p>
         Adresse : Saint‑Gilles‑les‑Bains, La Réunion  
         <br />
-        Email : contact@hugodiving.com  
+        Email : hugodiving974@gmail.com 
       </p>
       <p>Directeur de la publication : Hugo Fontaine</p>
 
@@ -77,7 +77,7 @@ export default function MentionsLegales() {
         Pour toute question concernant ces mentions légales, vous pouvez nous
         contacter à :  
         <br />
-        <strong>contact@hugodiving.com</strong>
+        <strong>hugodiving974@gmail.com</strong>
       </p>
     </div>
   );

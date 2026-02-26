@@ -71,7 +71,7 @@ export default function CGU() {
       <p>
         L’utilisateur dispose d’un droit d’accès, de rectification et de
         suppression de ses données en écrivant à :{" "}
-        <strong>contact@hugodiving.com</strong>.
+        <strong>hugodiving974@gmail.com</strong>.
       </p>
 
       <h2>7. Cookies</h2>
@@ -104,7 +104,7 @@ export default function CGU() {
       <h2>11. Contact</h2>
       <p>
         Pour toute question concernant ces CGU, vous pouvez nous contacter à :{" "}
-        <strong>contact@hugodiving.com</strong>
+        <strong>hugodiving974@gmail.com</strong>
       </p>
     </div>
   );
