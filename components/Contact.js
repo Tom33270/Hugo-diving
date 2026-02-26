@@ -27,14 +27,15 @@ export default function Contact() {
   };
 
   return (
-    <div className={styles.global}>
-
-<Head>
+    <><Head>
   <title>Contact – Hug’O₂ Diving  Plongée à Saint‑Gilles-les-Bains
 </title>
   <meta name="description" content="Réservez votre plongée, sortie cétacés ou initiation apnée à Saint‑Gilles. Contactez Hug’O₂ Diving : email, Instagram, localisation et horaires." />
   <link rel="canonical" href="https://hugodiving.com/contact" />
 </Head>
+    <div className={styles.global}>
+
+
       <section className={styles.header}>
          <h1 className={styles.title}>Contact</h1>
     </section>
@@ -87,5 +88,6 @@ export default function Contact() {
         
       </section>
     </div>
+    </>
   );
 }

@@ -6,6 +6,7 @@ import Head from "next/head";
 
 
 
+
 function Plongee(){
      const router = useRouter();
 
@@ -13,15 +14,13 @@ function Plongee(){
 
 
     return (
-<div className={styles.global}>
-
-
-<Head>
-  <title>Plongée La Réunion – Baptême & Exploration à Saint‑Gilles  Hug’O₂ Diving
+        <><Head>
+  <title>Plongée à La Réunion – Baptême & Exploration à Saint‑Gilles  Hug’O₂ Diving
 </title>
-  <meta name="description" content="TA DESCRIPTION ICIDécouvrez les plus beaux sites de plongée de Saint‑Gilles. Baptême, exploration, initiation et formations avec un moniteur E4 expérimenté. Matériel Scubapro inclus." />
+  <meta name="description" content="Découvrez les plus beaux sites de plongée de Saint‑Gilles. Baptême, exploration et formations avec moniteur E4. Matériel Scubapro inclus." />
   <link rel="canonical" href="https://hugodiving.com/plongee" />
 </Head>
+<div className={styles.global}>
     <div className={styles.header}>
          <h1 className={styles.title}>Plongée Bouteille </h1>
          <button onClick={() => router.push("/")}>Retour à l'accueil</button>
@@ -169,7 +168,7 @@ function Plongee(){
 
     </div>
 </div>
-
+</>
 
     )
 }

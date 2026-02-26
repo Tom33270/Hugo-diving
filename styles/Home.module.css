@@ -393,7 +393,10 @@ font-weight: 450;
     grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
     gap: 10px;
     cursor: pointer;
+    
   }
+
+
 
   .modalContent p {
     color: rgb(0, 0, 0);
@@ -589,10 +592,22 @@ font-weight: 450;
 .speciesGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  max-width: 1000px;
+  gap: 20px;
+  max-width: 900px;
   margin: auto;
   cursor: pointer;
+}
+.speciesGrid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease;  
+}
+
+
+.speciesGrid img:hover {
+  transform: scale(1.05);
 }
 
 .speciesGrid img {
@@ -625,6 +640,20 @@ font-weight: 450;
   padding: 0;
   
 }
+.location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  width: 100%;        /* permet au texte de s’étirer */
+  max-width: 100%;    /* empêche la compression */
+  white-space: normal; /* autorise les retours à la ligne naturels */
+}
+
+.location svg {
+  font-size: 20px; /* taille stable pour l’icône */
+}
+
 .titleContact{
 color:rgb(65, 63, 63);
 font-size: 40px;
@@ -634,6 +663,9 @@ font-size: 40px;
   font-size: 40px;
   margin-bottom: 20px;
 }
+
+
+
 
 .socials {
   margin-top: 20px;
@@ -759,7 +791,7 @@ font-size: 40px;
   .btnLoggin {
     width: 110px;
     height:80px;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 25px;
     margin:0
   }

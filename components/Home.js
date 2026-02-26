@@ -5,8 +5,8 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { Button } from 'antd';
 import { useState, useEffect, useRef } from 'react';
 import Modal from 'react-modal';
-import Head from "next/head";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 
 
@@ -163,20 +163,13 @@ const modalContent = (
 );
 
 return (
+        <><Head>
+  <title>Plongée La Réunion – Baptême, Snorkeling & Cétacés  Hug’O₂ Diving
+</title>
+  <meta name="description" content="Centre de plongée à Saint‑Gilles : baptême, exploration, snorkeling, apnée et sorties cétacés. Encadrement pro et matériel premium." />
+  <link rel="canonical" href="https://hugodiving.com/" />
+</Head>
   <div>
-    <Head>
-      <title>Plongée à Saint‑Gilles – Hug’O₂ Diving | Baptêmes, Explorations & Sorties Cétacés</title>
-      <meta
-        name="description"
-        content="Plongée sous‑marine à La Réunion avec un moniteur diplômé. Baptêmes, explorations, sorties cétacés et apnée à Saint‑Gilles-les-Bains."
-      />
-      <meta name="robots" content="index, follow" />
-      <meta property="og:title" content="Hug’O₂ Diving – Plongée à Saint‑Gilles" />
-      <meta property="og:description" content="Baptêmes, explorations, sorties cétacés et apnée à La Réunion." />
-      <meta property="og:image" content="/image/photoProfil.jpeg" />
-      <meta property="og:type" content="website" />
-      <link rel="canonical" href="https://hugodiving.com" />
-    </Head>
     <header className={styles.header}>
       <div className={styles.tete}>
         <div className={`${styles.btntete} ${scrolled ? styles.scrolled : ""}`}>
@@ -391,7 +384,9 @@ return (
       </footer>
     </div>
   </div>
+  </>
 );
+
 
 }
 export default Home;
