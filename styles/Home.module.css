@@ -424,6 +424,10 @@ font-weight: 450;
     rgb(238, 237, 237) 0%,
     rgb(80, 111, 129) 100%
   );
+    min-height: 100vh;
+  width: 100%;
+  padding-bottom: 80px;
+  
 }
 
 .about {

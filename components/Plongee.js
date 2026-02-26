@@ -2,7 +2,8 @@ import styles from '../styles/Plongee.module.css';
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
-import Head from "next/head";
+import Head from 'next/head';
+
 
 
 
@@ -14,12 +15,18 @@ function Plongee(){
 
 
     return (
-        <><Head>
-  <title>Plongée à La Réunion – Baptême & Exploration à Saint‑Gilles  Hug’O₂ Diving
-</title>
-  <meta name="description" content="Découvrez les plus beaux sites de plongée de Saint‑Gilles. Baptême, exploration et formations avec moniteur E4. Matériel Scubapro inclus." />
-  <link rel="canonical" href="https://hugodiving.com/plongee" />
-</Head>
+     <>   
+   <Head>
+    <title>Plongée à La Réunion – Baptême & Exploration à Saint‑Gilles | Hug’O₂ Diving</title>
+    <meta
+      name="description"
+      content="Découvrez les plus beaux sites de plongée de Saint‑Gilles. Baptême, exploration et formations avec moniteur E4. Matériel Scubapro inclus."
+    />
+    <link rel="canonical" href="https://hugodiving.com/plongee" />
+  </Head>
+
+<div style={{ all: "unset" }}>
+
 <div className={styles.global}>
     <div className={styles.header}>
          <h1 className={styles.title}>Plongée Bouteille </h1>
@@ -163,10 +170,7 @@ function Plongee(){
             <button onClick={() => router.push("/contact")}>Réserver maintenant</button>
         </div>
     </section>
-    <div className={styles.footer}>
-      <p>№ SIRET: 92148663500029</p>
-
-    </div>
+</div>
 </div>
 </>
 

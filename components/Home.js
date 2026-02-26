@@ -163,13 +163,14 @@ const modalContent = (
 );
 
 return (
-        <><Head>
+        <>
+        <Head>
   <title>Plongée La Réunion – Baptême, Snorkeling & Cétacés  Hug’O₂ Diving
 </title>
   <meta name="description" content="Centre de plongée à Saint‑Gilles : baptême, exploration, snorkeling, apnée et sorties cétacés. Encadrement pro et matériel premium." />
   <link rel="canonical" href="https://hugodiving.com/" />
 </Head>
-  <div>
+  
     <header className={styles.header}>
       <div className={styles.tete}>
         <div className={`${styles.btntete} ${scrolled ? styles.scrolled : ""}`}>
@@ -352,38 +353,7 @@ return (
       <button className={styles.otherBtn} onClick={() => navigate("/wikipage")}>
         Wikipage
       </button>
-
-      {/* CONTACT */}
-      <h2 className={styles.titleContact}>Contact</h2>
-
-      <section className={styles.contact}>
-        <p
-          className={styles.location}
-          onClick={() =>
-            window.open(
-              "https://www.google.com/maps/dir/?api=1&destination=Escapade+Plongée,+2+Rue+du+Port,+Saint-Gilles+les+Bains,+La+Réunion",
-              "_blank"
-            )
-          }
-        >
-          {position} Club Escapade Plongée - Saint-Gilles-les-Bains
-        </p>
-
-        <p
-          className={styles.location}
-          onClick={() => window.open("https://www.instagram.com/hug_o2_diving/")}
-        >
-          {instagram}hug_o2_diving
-        </p>
-
-        <p>hugodiving974@gmail.com</p>
-      </section>
-
-      <footer className={styles.footer}>
-        <p>№ SIRET: 92148663500029</p>
-      </footer>
     </div>
-  </div>
   </>
 );
 

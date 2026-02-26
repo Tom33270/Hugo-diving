@@ -1,12 +1,14 @@
 /* Global container */
 .global {
   min-height: 100vh;
+ 
   background: linear-gradient(
     to bottom,
     rgb(238, 237, 237) 0%,
     rgb(80, 111, 129) 100%
   );
 }
+
 
 .location:hover{
 text-decoration: underline;
