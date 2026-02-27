@@ -15,7 +15,7 @@ function App({ Component, pageProps }) {
         />
       </Head>
 
-      <main className="poppins">
+      <main>
         <Component {...pageProps} />
         <Footer />
       </main>
