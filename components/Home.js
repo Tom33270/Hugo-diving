@@ -264,7 +264,9 @@ return (
           <div className={styles.textContent}>
             <h2>Me, Myself and I</h2>
             <p>
-              Dans l’enseignement depuis plus de 20 ans, comme professeur de tennis dans un premier temps...
+               Dans l’enseignement depuis plus de 20 ans, comme professeur de tennis dans un premier temps, Mon parcours m’a mené de la Réunion à la Thaïlande, en passant par Banyuls-sur-Mer, pour vivre et enseigner ma passion de la plongée. Depuis 2017, je suis présent sur cette île magnifique et toujours avec la même envie de faire découvrir cette face peu connue qui grouille de vie ! 
+      Moniteur de plongée sous-marine professionnel,  je travaille en tant qu’indépendant sur le  Port de Saint-Gilles les Bains. 
+      Ce que j’aime le plus dans la plongée : Être dans l’instant présent, totalement connecté à l’environnement sous-marin, et me laisser surprendre par ses merveilles !
             </p>
 
             <button className={styles.moreBtn} onClick={() => navigate("/contact")}>

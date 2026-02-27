@@ -80,11 +80,6 @@ export default function Contact() {
         
         </div>
         <div> <button className={styles.btnHome} onClick={() => router.push("/")}>Retour à l'accueil</button></div>
-        <div className={styles.footer}>
-      <p>№ SIRET: 92148663500029</p>
-      
-
-    </div>
         
       </section>
     </div>
