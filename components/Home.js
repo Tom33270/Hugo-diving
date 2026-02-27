@@ -282,22 +282,22 @@ return (
         <div className={styles.whyGrid}>
           <div>
             <h3>Certifications multiples</h3>
-            <p>- Diplôme d'état E4,<br />- Moniteur fédéral 1er degré<br />PADI, SDI/TDI...</p>
+            <p><ul><li>Diplôme d'état E4</li><li>Moniteur fédéral 1er degré</li><li>PADI, SDI/TDI...</li></ul></p>
           </div>
 
           <div>
             <h3>Matériel Scubapro</h3>
-            <p>- Équipement de qualité,<br />régulièrement entretenu...</p>
+            <p><ul><li> Équipement de qualité, régulièrement entretenu...</li></ul></p>
           </div>
 
           <div>
             <h3>Expérience internationale</h3>
-            <p>- +4000 plongées dans le monde entier...</p>
+            <p><ul><li>+4000 plongées dans le monde entier...</li></ul></p>
           </div>
 
           <div>
             <h3>Approche personnalisée</h3>
-            <p>Petits groupes,<br />encadrement adapté à votre niveau</p>
+            <p><ul><li>Petits groupes, encadrement adapté à votre niveau</li></ul></p>
           </div>
         </div>
       </section>

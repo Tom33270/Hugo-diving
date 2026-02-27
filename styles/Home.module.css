@@ -552,6 +552,17 @@ font-weight: 450;
   margin: auto;
   font-size: 20px;
   color: rgb(87, 85, 85);
+
+
+}
+
+.whyGrid ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.whyGrid li {
+  margin-bottom: 4px;
 }
 
 .gallery {
