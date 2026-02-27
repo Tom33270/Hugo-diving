@@ -40,6 +40,7 @@ export default function Contact() {
          <h1 className={styles.title}>Contact</h1>
     </section>
       <section className={styles.main}>
+        
        
 
         {sent && <p className={styles.success}>Message envoyé !</p>}

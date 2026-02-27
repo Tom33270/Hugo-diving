@@ -38,6 +38,7 @@
   margin-bottom: 20px;
 }
 
+
 /* Main section */
 .main {
   padding:10px;
@@ -49,6 +50,8 @@
   width: 100px;
   height: 100px;
 }
+
+
 
 .presentation {
   display: flex;

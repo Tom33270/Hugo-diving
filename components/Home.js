@@ -1,8 +1,8 @@
 import styles from '../styles/Home.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faCreditCard, faFish, faLocationDot, faMailBulk, faPhotoFilm, faWater} from '@fortawesome/free-solid-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { Button } from 'antd';
+import { faFish, faLocationDot, faMailBulk, faPhotoFilm, faWater} from '@fortawesome/free-solid-svg-icons';
+
+
 import { useState, useEffect, useRef } from 'react';
 import Modal from 'react-modal';
 import { useRouter } from "next/router";
@@ -13,7 +13,7 @@ import Head from "next/head";
 import 'leaflet/dist/leaflet.css';
 import dynamic from 'next/dynamic';
 
-const Leaflet = dynamic(() => import('leaflet'), { ssr: false });
+ dynamic(() => import('leaflet'), { ssr: false });
 
 function Home() {
   const router = useRouter();
@@ -22,13 +22,10 @@ function Home() {
   const [openMap, setOpenMap] = useState(false);
   const mapRef = useRef(null);
   const tarifsRef = useRef(null);
-
   const menu = <FontAwesomeIcon icon={faWater} />;
   const position = <FontAwesomeIcon icon={faLocationDot} />;
   const photos = <FontAwesomeIcon icon={faPhotoFilm} />;
-  const tarifs = <FontAwesomeIcon icon={faCreditCard} />;
   const contact = <FontAwesomeIcon icon={faMailBulk} />;
-  const instagram = <FontAwesomeIcon icon={faInstagram} />;
    const wiki = <FontAwesomeIcon icon={faFish} />;
    
 const [Images, setImages] = useState([]);
