@@ -465,7 +465,10 @@ font-weight: 450;
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(6px);
   box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
-  background-image: url('/image/blackandwhite.jpeg');
+    border-top: 1px solid rgb(240, 224, 205);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  background-image: url('/image/meAndI.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -850,6 +853,8 @@ font-size: 40px;
   
   /* About section */
   .about {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 95%;
     flex-direction: column;
     justify-content: center;
@@ -862,11 +867,12 @@ font-size: 40px;
   
   font-size: 40px;
   margin-bottom: 10px;
-  color:rgb(113, 86, 48);
+  color:rgb(240, 224, 205);
 }
 
 .about p {
- color:rgb(113, 86, 48);
+ color:rgb(240, 224, 205);
+ text-align:left;
   max-width: 500px;
   font-size: 18px;
   line-height: 1.5;
