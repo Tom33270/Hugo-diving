@@ -12,6 +12,7 @@
 .mainTitle h1,
 .mainTitle p {
   margin: 0;
+  
   padding: 0;
 }
 .mainTitle{
@@ -25,11 +26,13 @@
 
 .mainTitle h1{
   font-size: 60px;
-  color: rgb(240, 223, 205)
+  color: rgb(240, 223, 205);
+   text-shadow: 0 2px 10px rgba(0,0,0,0.9);
 }
 .mainTitle p {
   font-size: 24px;
-  color:rgb(240, 223, 205)
+  color:rgb(240, 223, 205);
+   text-shadow: 0 2px 10px rgba(0,0,0,0.9);
 }
 
 .buttonsRight {
@@ -494,10 +497,12 @@ font-weight: 450;
   font-size: 40px;
   margin-bottom: 10px;
   color:rgb(240, 224, 205);
+   text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
 .about p {
   color:rgb(240, 224, 205);
+   text-shadow: 0 2px 6px rgba(0,0,0,0.9);
   max-width: 500px;
   font-size: 18px;
   line-height: 1.5;
@@ -509,6 +514,7 @@ font-weight: 450;
   border-radius: 8px;
   border: 1px solid rgb(240, 224, 205);
   background: transparent;
+   text-shadow: 0 2px 6px rgba(0,0,0,0.9);
   color:  rgb(240, 224, 205);
   cursor: pointer;
   transition: 0.3s ease;
